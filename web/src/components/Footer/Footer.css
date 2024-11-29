@@ -1,0 +1,26 @@
+.bg-color-dark{
+    background-color: #000;
+
+}
+
+.cntnt{
+    color: white !important;
+}
+
+
+.icns{
+    color: #cacaca;
+}
+.footer-link{
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 14px;
+}
+.footer-link:hover{
+    color: gold !important;
+}
+
+.footer-body{
+    z-index: 10;
+    position: relative;
+}

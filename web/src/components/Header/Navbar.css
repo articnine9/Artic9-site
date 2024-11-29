@@ -1,25 +1,23 @@
-.header {
-  height: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: #ffb901;
-}
 .navbar {
   height: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  background-color: #ffb901;
-  width: 90%;
+  background-color: transparent;
+  width: 100%;
   position: fixed;
   z-index: 1000;
 }
 
 .navbar .logo {
   font-size: 24px;
+  display: flex;
+  align-items: center;
+  height: fit-content;
 }
-
+.logo img{
+  margin-top: 20px;
+}
 .navbar .nav-links {
   list-style-type: none;
   display: flex;
@@ -31,7 +29,7 @@
 }
 
 .navbar .nav-links li a {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 18px;
 }

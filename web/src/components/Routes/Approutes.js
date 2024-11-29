@@ -9,7 +9,7 @@ import About from "../About/About";
 import Blog from "../Blog/Blog";
 import Contact from "../Contact/Contact";
 import Navbar from "../Header/Navbar";
-
+import Footer from '../Footer/Footer.jsx'
 const Approutes = () => {
   return (
     <Router>
@@ -23,6 +23,7 @@ const Approutes = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 };

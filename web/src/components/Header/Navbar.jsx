@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";  
-import logo from "../../Assets/logo1.png";
+import logo from "../../Assets/logo2.png";
 import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <header className="header"> 
       <nav className="navbar">
         <div className="logo">
           <Link to="/" aria-label="Go to homepage">
@@ -33,7 +32,6 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-    </header>
   );
 };
 
