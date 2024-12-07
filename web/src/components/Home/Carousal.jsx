@@ -1,41 +1,107 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
-import gt from "../../Assets/GT.png";
-import gt1 from "../../Assets/carousel.png";
-import harris from "../../Assets/carousel.png";
-import harris1 from "../../Assets/harris2.png";
-import ananth from "../../Assets/anantha-bavan.png";
-import logo from '../../Assets/gt-logo.png'
+import GT from "../../Assets/carousal/gt-bg.png";
+import BNI from '../../Assets/carousal/bni-bgs.png'
+import AT from "../../Assets/carousal/at-bg.png";
+import harris from "../../Assets/harris2.png";
+import Tino from "../../Assets/carousal/gt-bg.png";
+import Del from "../../Assets/carousal/gt-bg.png";
+
+import gtlogo from "../../Assets/gt-logo.png";
+import bnilogo from "../../Assets/clients-logo/Bni.png";
+import atlogo from "../../Assets/clients-logo/at.png";
+import harrislogo from "../../Assets/clients-logo/Harris-nadar.png";
+import tinologo from "../../Assets/clients-logo/tino-logo-gtm.png";
+import dellogo from "../../Assets/clients-logo/Delano.png";
 import "./Home.css";
 
 const CarouselComponent = () => {
-  const images = [gt, gt1, harris, harris1, ananth];
+  const images = [GT, BNI, AT, harris, Tino, Del];
+  const logos = [gtlogo, bnilogo, atlogo, harrislogo, tinologo, dellogo];
+  const texts = [
+    [
+      "Does this ad & style look familiar?",
+      "Yes, you guessed it right. We are the creators of this.",
+      "faster for the fastest internet brand",
+    ],
+    [
+      "Curious to know! ",
+      "how a regular hall of fame chapter stood out in the crowd ",
+      "throughout BNI India? We made them shine beyond the region.",
+    ],
+    [
+      "Do you know?",
+      "how we increased the no of users",
+      "faster for the fastest internet brand?",
+    ],
+    [
+      "Ever witnessed a regional brand gain high face value?",
+      "We helped make it happen with innovative solutions.",
+      "faster for the fastest internet brand",
+    ],
+    [
+      "Do you know about the brand that increased sales of 2cr only with the help of SEO?",
+      "We took them to the next level with our SEO expertise.",
+      "faster for the fastest internet brand",
+    ],
+    [
+      "Remember the time where we tempted you with wholesome virtual experiences",
+      "Our creative strategies brought them to life.",
+      "faster for the fastest internet brand",
+    ],
+  ];
   const images1 = [
     "https://picsum.photos/id/123/1200/400",
     "https://picsum.photos/id/456/1200/400",
     "https://picsum.photos/id/678/1200/400",
   ];
+  // const [activeIndex1, setActiveIndex1] = useState(0);
+  // const [activeIndex2, setActiveIndex2] = useState(0);
+  // const [activeIndex3, setActiveIndex3] = useState(0);
+
+  // useEffect(() => {
+  //   const interval1 = setInterval(() => {
+  //     setActiveIndex1((prevIndex) => (prevIndex + 1) % images.length);
+  //   }, 3000);
+  //   return () => clearInterval(interval1);
+  // }, [images.length]);
+
+  // useEffect(() => {
+  //   const interval2 = setInterval(() => {
+  //     setActiveIndex2((prevIndex) => (prevIndex + 1) % images.length);
+  //   }, 4000);
+  //   return () => clearInterval(interval2);
+  // }, [images.length]);
+
+  // useEffect(() => {
+  //   const interval3 = setInterval(() => {
+  //     setActiveIndex3((prevIndex) => (prevIndex + 1) % images.length);
+  //   }, 5000);
+  //   return () => clearInterval(interval3);
+  // }, [images.length]);
 
   return (
     <div className="carousel-container">
       <div className="carousel-section1">
-        <Carousel pause='false'>
+        <Carousel pause="false" interval={113000}>
           {images.map((image, index) => (
             <Carousel.Item key={index}>
               <div className="imgs">
                 <div
-                  className=" pstrs"
+                  className="pstrs"
                   style={{ backgroundImage: `url(${image})` }}
                   alt={`slide-${index}`}
                 >
                   <div className="gap"></div>
                   <div className="pstrs-cnt">
-                    <img src={logo} alt="logo" className="logo"/>
-                    <h2 className="mainline">Does this ad & style looks familier</h2>
-                    <span className="secondline">Yes you guessed it right
-                      we are the creators of this
-                    </span>
+                    <h2 className="mainline">
+                      {texts[index][0]} <br />
+                      <span>{texts[index][1]}</span>
+                    </h2>
+                    <span className="secondline">{texts[index][2]}</span>
+
                     <div className="slider-btn">
+                      <img src={logos[index]} alt="logo" className="logo" />
                       <button className="more-btn">Learn more</button>
                     </div>
                   </div>
@@ -48,7 +114,7 @@ const CarouselComponent = () => {
 
       <div className="carousel-section2">
         <div className="sml-carousal">
-          <Carousel pause='false'>
+          <Carousel pause="false" interval={4000}>
             {images1.map((src, index) => (
               <Carousel.Item key={index}>
                 <img
@@ -60,8 +126,9 @@ const CarouselComponent = () => {
             ))}
           </Carousel>
         </div>
+
         <div className="sml-carousal1">
-          <Carousel pause='false'>
+          <Carousel pause="false" interval={5000}>
             {images1.map((src, index) => (
               <Carousel.Item key={index}>
                 <img

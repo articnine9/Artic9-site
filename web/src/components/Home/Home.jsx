@@ -4,14 +4,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
-import Boy from "../../Assets/boy1.png";
 
-import women from "../../Assets/case study/snap.avif";
-import slack from "../../Assets/case study/snap.avif";
-import snap from "../../Assets/case study/snap.avif";
-import pink from "../../Assets/case study/snap.avif";
-import gray from "../../Assets/case study/snap.avif";
-import margeta from "../../Assets/case study/snap.avif";
+import women from "../../Assets/slider/seo-1-1.png";
+import slack from "../../Assets/slider/benefits-of-custom-web-development-and-web-design-12grids.webp";
+import snap from "../../Assets/slider/brand-te-blog-800x363.png";
+import pink from "../../Assets/slider/smo-1.webp";
+import gray from "../../Assets/slider/seo-1-1.png";
+import margeta from "../../Assets/slider/benefits-of-custom-web-development-and-web-design-12grids.webp";
 
 import grid1 from "../../Assets/platez.png";
 import grid2 from "../../Assets/b2.png";
@@ -19,9 +18,10 @@ import grid3 from "../../Assets/b4.png";
 import grid4 from "../../Assets/harris2.png";
 import grid5 from "../../Assets/anantha-bavan.png";
 
-import ServiceTab from "./ServiceTab";
+// import ServiceTab from "./ServiceTab";
 import Carousal from "./Carousal";
 import TestimonialSection from "./Testimonial";
+import Clients from './Clients'
 import "./Home.css";
 
 const Home = () => {
@@ -54,6 +54,7 @@ const Home = () => {
   // const imagesGrid3 = [grid3, grid3, grid3, grid3];
   // const imagesGrid4 = [grid5, grid1, grid2, grid4];
   // const imagesGrid5 = [grid4, grid5, grid1, grid2];
+
   return (
     <>
       <Carousal />
@@ -61,46 +62,29 @@ const Home = () => {
       {/* ----------------------------------------------------Who-are-we------------------------------------------------- */}
       <section className="who-are-you">
         <div className="abt-container">
-          <div className="abt-img">
-            <img src={Boy} alt="About Us" />
+          <div className="abtcnt1"></div>
+          <div className="abtcnt2">
+            <div className="abtcnt2-head">
+              We Shape
+              <span> Digital Journeys </span>
+              <br /> from <span>Ideas</span> to
+              <span> Execution and Beyond.</span>
+            </div>
           </div>
-          <div className="abt-cnt">
-            <div className="abt1">
-              <h2>
-                <b>Artic9</b> Creative Agency
-              </h2>
+          <div className="abtcnt3">
+            <div className="abtimg">
+              <div className="abtgap"></div>
+              <span class="text-outline">artic9</span>
             </div>
-            <div className="abt2">
-              We are passionate about our work. Our designers stay ahead of the
-              curve to provide engaging and user-friendly website designs to
-              make your business stand out with your business pattern.
-            </div>
-            <div className="abt3">
-              <ul>
-                <li style={{ fontSize: "16px" }}>
-                  <b>Our Origin:</b> Founded in 2019, our digital marketing
-                  company has quickly established itself as a leader in the
-                  industry by emphasizing creativity and innovation.
-                </li>
-                <br />
-                <li style={{ fontSize: "16px" }}>
-                  <b>Our Expertise:</b> With a team of over 25 seasoned digital
-                  marketing experts, we bring a wealth of knowledge and
-                  experience to every project, ensuring top-notch service and
-                  results.
-                </li>
-                <br />
-                <li style={{ fontSize: "16px" }}>
-                  <b>Be Unique:</b> We believe in the power of uniqueness. Our
-                  strategies are tailored to highlight the distinctive qualities
-                  of each client, setting them apart in a crowded marketplace.
-                </li>
-              </ul>
-            </div>
-            <div className="abt4">
-              <a href="/">
-                <button className="know-more-btn">Know More</button>
-              </a>
+          </div>
+          <div className="abtcnt4">
+            <div className="abt-lines">
+              <p>
+                Transforming visions into vibrant realities,
+                <span>Artic9 </span>
+                weaves creativity, technology, and strategy into a seamless
+                tapestry of innovation.
+              </p>
             </div>
           </div>
         </div>
@@ -108,6 +92,11 @@ const Home = () => {
 
       {/* ----------------------------------------------------slider------------------------------------------------- */}
       <section className="slider-main">
+        <div className="slider-head">
+          <h3>
+            Looking for an <b>change over</b> ?
+          </h3>
+        </div>
         <div className="home-slider">
           <Slider {...setting1}>
             {clients.map((client, index) => (
@@ -124,8 +113,12 @@ const Home = () => {
       </section>
 
       {/* ----------------------------------------------------Why-choose-us------------------------------------------------- */}
-      <ServiceTab />
+      {/* <ServiceTab /> */}
 
+      {/* ----------------------------------------------------Clients------------------------------------------------- */}
+      <Clients/>
+      {/* ----------------------------------------------------Why-choose-us------------------------------------------------- */}
+      <TestimonialSection />
       {/* ----------------------------------------------------Blog------------------------------------------------- */}
       <section className="blog-main">
         <div className="blog-container">
@@ -207,19 +200,16 @@ const Home = () => {
       {/* ----------------------------------------------------Team-quote------------------------------------------------- */}
       <section className="teamquote-main">
         <div className="teamquote-cnt">
-            <b>
-              "Together, we are committed to excellence, innovation, and making
-              a meaningful <br />
-              impact in the digital world"
-            </b>
+          <b>
+            "Together, we are committed to excellence, innovation, and making a
+            meaningful <br />
+            impact in the digital world"
+          </b>
           <h3>
             <i>#beunique</i>
           </h3>
         </div>
       </section>
-
-      {/* ----------------------------------------------------Why-choose-us------------------------------------------------- */}
-      <TestimonialSection />
 
       {/* ----------------------------------------------------Let's work------------------------------------------------- */}
       <section className="letswork-main">
