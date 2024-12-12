@@ -19,8 +19,3 @@
 .footer-link:hover{
     color: gold !important;
 }
-
-.footer-body{
-    z-index: 10;
-    position: relative;
-}

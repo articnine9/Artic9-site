@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import logo from "../../Assets/logo1.png";
+import { Link, useLocation } from "react-router-dom";
+import logo from "../../Assets/logo1.png"; 
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation(); 
 
   const handleScroll = () => {
-    if (window.scrollY > 1500) {
+    if (window.scrollY > 1400) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
@@ -15,15 +16,21 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    if (location.pathname === "/") {
+      window.addEventListener("scroll", handleScroll);
+    }
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [location.pathname]);
+
+  const isOtherPage = location.pathname !== "/";
 
   return (
-    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
+    <nav
+      className={`navbar ${isScrolled ? "scrolled" : ""} ${isOtherPage ? "other-page" : ""}`}
+    >
       <div className="navcontainer">
         <div className="logo">
           <Link to="/" aria-label="Go to homepage">

@@ -1,7 +1,4 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useState } from "react";
 import "./Client.css";
 
 import Akshaya from "../../Assets/clients-logo/akshaya.jpg";
@@ -34,91 +31,220 @@ import Titan from "../../Assets/clients-logo/Titan.jpg";
 import TitanEyePlus from "../../Assets/clients-logo/titaneyeplus.jpg";
 import Votto from "../../Assets/clients-logo/votto.jpg";
 import YMCA from "../../Assets/clients-logo/ymca.jpg";
+import Tino from "../../Assets/clients-logo/tino-logo-gtm.png";
+import BNi from "../../Assets/clients-logo/Bni.png";
 
 const clients = [
-  { src: HarrisNadar, alt: "Harris Nadar" },
-  { src: AT, alt: "AT" },
-  { src: GT, alt: "GT" },
-  { src: Titan, alt: "Titan" },
-  { src: TG, alt: "TG" },
-  { src: Snowch, alt: "Snowch" },
-  { src: Arunachala, alt: "Arunachala" },
-  { src: Pragurp, alt: "Pragurp" },
-  { src: ColdAir, alt: "Cold Air" },
-  { src: Delano, alt: "Delano" },
-  { src: DigiMart, alt: "Digi Mart" },
-  { src: Ayutha, alt: "Ayutha" },
-  { src: Hairways, alt: "Hairways" },
-  { src: BrandPartners, alt: "Brand Partners" },
-  { src: Platez, alt: "Platez" },
-  { src: RajanCo, alt: "Rajan Co" },
-  { src: Sident, alt: "Sident" },
-  { src: ClearEye, alt: "Clear Eye" },
-  { src: Thasor, alt: "Thasor" },
-  { src: AnandaBhavan, alt: "Ananda Bhavan" },
-  { src: TGImage, alt: "TG" },
-  { src: DCS, alt: "DCS" },
-  { src: Akshaya, alt: "Akshaya" },
-  { src: Karpagam, alt: "Karpagam" },
-  { src: MarthaGapharma, alt: "Martha Gapharma" },
-  { src: TitanEyePlus, alt: "Titan Eye Plus" },
-  { src: YMCA, alt: "YMCA" },
-  { src: Votto, alt: "Votto" },
-  { src: Spring, alt: "Spring" },
-  { src: FirstLoan, alt: "First Loan" },
+  {
+    src: HarrisNadar,
+    alt: "Harris Nadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: AT,
+    alt: "At Broadband",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: GT,
+    alt: "GT Holidyas",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Titan,
+    alt: "Titan World",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: TG,
+    alt: "Tony & Guy",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Snowch,
+    alt: "Snowch",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Arunachala,
+    alt: "Arunachala College",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Pragurp,
+    alt: "Pragurp Architecture",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: ColdAir,
+    alt: "Cold Air Conditioning",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Delano,
+    alt: "Delano Residency",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: DigiMart,
+    alt: "Digi Mart",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Ayutha,
+    alt: "Ayuta Caterer",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Hairways,
+    alt: "Hairways Salon",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: BrandPartners,
+    alt: "Brand Partners",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Platez,
+    alt: "Platez",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: RajanCo,
+    alt: "Rajan & Co",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Sident,
+    alt: "Si-dent Dental clinic",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: ClearEye,
+    alt: "Clear Eye Optics",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Thasor,
+    alt: "Thasor Musicals",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: AnandaBhavan,
+    alt: "Ananda Bhavan",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: TGImage,
+    alt: "Tony & Guy essensuals",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: DCS,
+    alt: "DCS Technology",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Akshaya,
+    alt: "Akshaya Catering ",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Karpagam,
+    alt: "Karpagam Jwellers",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: MarthaGapharma,
+    alt: "Marthahan pharma",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: TitanEyePlus,
+    alt: "Titan Eye Plus",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: YMCA,
+    alt: "YMCA",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Votto,
+    alt: "Votto",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Spring,
+    alt: "Spring Fertility Centre",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: FirstLoan,
+    alt: "First Loan",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Tino,
+    alt: "Tino Engineering",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: BNi,
+    alt: "BNI Kanya",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
 ];
 
-const App = () => {
-  const setting1 = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 7,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    pauseOnHover: false,
-    arrows: false,
-    draggable: false,
+const Clients = () => {
+  const [tooltip, setTooltip] = useState(null);
+  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseEnter = (client) => {
+    setTooltip(client);
   };
 
-  const setting2 = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 7,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    rtl: true,
-    pauseOnHover: false,
-    arrows: false,
-    draggable: false,
+  const handleMouseLeave = () => {
+    setTooltip(null);
   };
 
+  const handleMouseMove = (event) => {
+    setTooltipPosition({
+      x: event.clientX + window.scrollX + 20,  
+      y: event.clientY + window.scrollY - -20,  
+    });
+  };
   return (
-    <div className="mainContainer">
-      <h3 className="ourclients">Our Clients</h3>
-      <div className="sliders">
-        <Slider {...setting1}>
-          {clients.map((client, index) => (
-            <div key={index} className="slidercontainer">
-              <img src={client.src} width={200} alt={client.alt} />
-            </div>
-          ))}
-        </Slider>
-        <Slider {...setting2}>
-          {clients.map((client, index) => (
-            <div key={index} className="slidercontainer">
-              <img src={client.src} width={200} alt={client.alt} />
-            </div>
-          ))}
-        </Slider>
+<div className="clients-main">
+      <h3 className="clients-head">Our Trusted Partners</h3>
+      <div className="client-sec">
+        {clients.map((client, index) => (
+          <div
+            key={index}
+            className="client-logo"
+            onMouseEnter={() => handleMouseEnter(client)}
+            onMouseLeave={handleMouseLeave}
+            onMouseMove={handleMouseMove}
+          >
+            <img src={client.src} alt={client.alt} />
+          </div>
+        ))}
+        {tooltip && (
+          <div
+            className="tooltip"
+            style={{
+              left: `${tooltipPosition.x}px`,
+              top: `${tooltipPosition.y}px`,
+            }}
+          >
+            <p className="tltip-head">{tooltip.alt}</p>
+            <p>{tooltip.desc}</p>
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
-export default App;
+export default Clients;

@@ -36,6 +36,7 @@ import Votto from "../../Assets/clients-logo/votto.jpg";
 import YMCA from "../../Assets/clients-logo/ymca.jpg";
 import { Link } from "react-router-dom";
 import { RiArrowRightLine } from "react-icons/ri";
+
 const clients = [
   { src: HarrisNadar, alt: "Harris Nadar" },
   { src: AT, alt: "AT" },
@@ -73,10 +74,10 @@ const App = () => {
   const setting1 = {
     dots: false,
     infinite: true,
-    slidesToShow: 5,
+    slidesToShow: 7,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
+    speed: 3000,
     autoplaySpeed: 0,
     cssEase: "linear",
     pauseOnHover: false,
@@ -87,10 +88,10 @@ const App = () => {
   const setting2 = {
     dots: false,
     infinite: true,
-    slidesToShow: 5,
+    slidesToShow: 7,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
+    speed: 3000,
     autoplaySpeed: 0,
     cssEase: "linear",
     rtl: true,
@@ -99,36 +100,53 @@ const App = () => {
     draggable: false,
   };
 
-  const text = "View All Clients";
   return (
     <div className="mainContainer">
+      <h3 className="client-head">Our Trusted Partners</h3>
       <div className="sliders">
+
         <Slider {...setting1}>
           {clients.map((client, index) => (
-            <div key={index} className="slidercontainer">
+            <div key={index} className="client-slider">
               <img src={client.src} width={200} alt={client.alt} />
             </div>
           ))}
         </Slider>
+
         <Slider {...setting2}>
           {clients.map((client, index) => (
-            <div key={index} className="slidercontainer">
+            <div key={index} className="client-slider">
               <img src={client.src} width={200} alt={client.alt} />
             </div>
           ))}
         </Slider>
+
+        <Slider {...setting1}>
+          {clients.map((client, index) => (
+            <div key={index} className="client-slider">
+              <img src={client.src} width={200} alt={client.alt} />
+            </div>
+          ))}
+        </Slider>
+
+        <Slider {...setting2}>
+          {clients.map((client, index) => (
+            <div key={index} className="client-slider">
+              <img src={client.src} width={200} alt={client.alt} />
+            </div>
+          ))}
+        </Slider>
+        
       </div>
 
       <div className="ourclients">
         <div className="clntlink">
           <Link to="/clients" aria-label="View Clients" className="clientlink">
-            {text.split("").map((letter, index) => (
-              <span key={index} style={{ "--delay": `${index * 0.05}s` }}>
-                {letter}
-              </span>
-            ))}
+            <div className="cta">
+              <span>View all clients</span>
+              <RiArrowRightLine className="svg" />
+            </div>
           </Link>
-          <RiArrowRightLine />
         </div>
       </div>
     </div>

@@ -33,7 +33,7 @@ const Home = () => {
     { src: gray, alt: "clients" },
     { src: margeta, alt: "clients" },
   ];
-  const setting1 = {
+  const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 4,
@@ -94,11 +94,11 @@ const Home = () => {
       <section className="slider-main">
         <div className="slider-head">
           <h3>
-            Looking for an <b>change over</b> ?
+            Looking for an <b>change-over</b> ?
           </h3>
         </div>
         <div className="home-slider">
-          <Slider {...setting1}>
+          <Slider {...settings}>
             {clients.map((client, index) => (
               <div key={index} className="slidercontainer">
                 <div
