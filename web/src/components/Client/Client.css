@@ -79,18 +79,3 @@
 .tltip-head {
   text-align: center;
 }
-
-@media (max-width: 768px) {
-  .clients-head {
-    font-size: 40px;
-  }
-
-  .client-sec {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 15px;
-  }
-
-  .client-logo {
-    height: 100px;
-  }
-}

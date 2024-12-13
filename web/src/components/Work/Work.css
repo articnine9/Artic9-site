@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 150px;
+  margin: 150px 0px;
 }
 .work-head {
   width: 100%;
@@ -49,35 +49,38 @@
   color: black;
   list-style: disc;
 }
+
 .work-section {
-  width: 100%;
+  width: 60%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   margin-top: 100px;
 }
 
 .work-sec {
-  height: 750px;
-  /* border: 1px solid; */
+  border: 1px solid;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   transition: transform 0.3s ease-in-out;
   text-decoration: none;
-  color:#000;
+  color: #000;
+  gap: 9px;
+  margin-bottom: 50px;
 }
 .work-sec:hover {
   transform: scale(1.05);
   z-index: 10;
 }
 .wrk-img {
-  height: 78%;
+  height: 70%;
   width: 90%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  /* border: 1px solid; */
 }
 .wrk-img img {
   height: 100%;
@@ -86,36 +89,93 @@
   transition: transform 0.3s ease-in-out;
 }
 .work-sec:hover .wrk-img img {
-  transform: scale(1); 
+  transform: scale(1);
 }
 .wrk-cnt {
-  height: 18%;
   width: 90%;
   /* border: 1px solid; */
 }
 .wrk-cnt h4 {
+  margin: 0%;
   font-style: italic;
 }
+.wrk-cnt span {
+  font-size: 15px;
+}
 .sec-1,
-.sec-4 {
-  width: 68%;
+.sec-6 {
+  width: 63%;
 }
 .sec-2,
-.sec-3 {
-  margin-top: 500px;
+.sec-7 {
   width: 30%;
 }
-
-.sec-5,
-.sec-6,
-.sec-7 {
-  width: 31.6%;
-}
-.sec-6 {
-  margin-top: 30%;
+.sec-3,
+.sec-4,
+.sec-5 {
+  width: 30%;
 }
 
 .sec-8,
 .sec-9 {
-  width: 49%;
+  width: 47%;
+}
+
+.work-side {
+  border: 1px solid;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* margin-top: 100px; */
+}
+.work-side-sec {
+  width: 90%;
+  height: 200px;
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.side-img {
+  width: 30%;
+  /* border: 1px solid; */
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.side-img img {
+  height: 150px;
+  width: 100%;
+}
+.side-cnt {
+  width: 70%;
+  /* border: 1px solid; */
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.side-cntnts,
+.side-category {
+  width: 90%;
+}
+.side-head {
+  margin-top: 20px;
+  width: 90%;
+  font-style: italic;
+}
+.side-head h4 {
+  margin: 0%;
+}
+.side-category {
+  margin-bottom: 20px;
 }
