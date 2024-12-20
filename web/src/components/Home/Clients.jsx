@@ -18,7 +18,7 @@ import DigiMart from "../../Assets/clients-logo/Digi-Mart.png";
 import FirstLoan from "../../Assets/clients-logo/first-loan.jpg";
 import GT from "../../Assets/clients-logo/GT.png";
 import Hairways from "../../Assets/clients-logo/Hairways.png";
-import HarrisNadar from "../../Assets/clients-logo/Harris-nadar.png";
+import HarrisNadar from "../../Assets/clients-logo/Harris Nadar Logo BlaCK.png";
 import Karpagam from "../../Assets/clients-logo/karpagam.jpg";
 import MarthaGapharma from "../../Assets/clients-logo/marthagapharma.jpg";
 import Platez from "../../Assets/clients-logo/Platez.png";
@@ -34,6 +34,15 @@ import Titan from "../../Assets/clients-logo/Titan.jpg";
 import TitanEyePlus from "../../Assets/clients-logo/titaneyeplus.jpg";
 import Votto from "../../Assets/clients-logo/votto.jpg";
 import YMCA from "../../Assets/clients-logo/ymca.jpg";
+import BNi from "../../Assets/clients-logo/Bni.png";
+// import Varam from '../../Assets/clients-logo/Varam.png'
+import Vpr from '../../Assets/clients-logo/vpr-logo.png'
+// import Gb from '../../Assets/clients-logo/GB.png'
+// import Fuji from '../../Assets/clients-logo/Fuji.png'
+
+
+import Jd from '../../Assets/clients-logo/JD Wood.png'
+
 import { Link } from "react-router-dom";
 import { RiArrowRightLine } from "react-icons/ri";
 
@@ -68,6 +77,12 @@ const clients = [
   { src: Votto, alt: "Votto" },
   { src: Spring, alt: "Spring" },
   { src: FirstLoan, alt: "First Loan" },
+  { src: BNi, alt: "BNI Kanya" },
+  // { src: Varam, alt: "Varam Hospital" },
+  { src: Vpr, alt: "VPR Construction" },
+  // { src: Gb, alt: "Greatest Bakery" },
+  { src: Jd, alt: "JD Wood " },
+  // { src: Fuji, alt: "Fuji" },
 ];
 
 const App = () => {

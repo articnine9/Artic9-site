@@ -1,0 +1,140 @@
+.contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-main {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact-banner {
+  height: 500px;
+  width: 100%;
+  background: url(../../Assets/Contact-banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.contact-banner h2 {
+  font-family: "Anton", sans-serif;
+  font-size: 60px;
+  margin-top: 200px;
+}
+.contact-section {
+  width: 80%;
+  padding: 100px 0px;
+}
+
+.contact-sec,
+.contact-sec1 {
+  width: 50%;
+}
+
+.contact-sec img {
+  height: 500px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.contact-head {
+  width: 100%;
+  margin-bottom: 45px;
+  color: #454545;
+
+}
+.contact-head span {
+  font-family: "Anton", sans-serif;
+}
+.contact-head h2 {
+  font-size: 40px;
+  line-height: 1.208;
+  font-family: "Anton", sans-serif;
+  letter-spacing: 1px;
+
+}
+
+.contact-form {
+  width: 100%;
+  margin-bottom: 90px;
+}
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.form-group {
+  width: 48%;
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  border: none;
+  background-color: transparent !important;
+  border-bottom: 2px solid rgba(226, 146, 124, 0.45) !important;
+}
+.form-group1 {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  border: none;
+  background-color: transparent !important;
+  border-bottom: 2px solid rgba(226, 146, 124, 0.45) !important;
+}
+.form-group input,
+.form-group1 textarea {
+  height: 50px;
+  width: 100%;
+  border: none;
+  font-weight: 700;
+  color: #000000;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #000000;
+  font-weight: bold;
+}
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+  border: none;
+  outline: none;
+}
+
+.form-group2 {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: left;
+}
+
+.form-icon {
+  margin: 0px 20px;
+  font-size: 20px;
+}
+.submit-btn {
+  z-index: 1;
+  height: 44px;
+  width: 138px;
+  font-weight: 600;
+  line-height: 38px;
+  padding-right: 3px;
+  border-radius: 35px;
+  position: relative;
+  font-family: "poppins", sans-serif;
+  background-color: #000000;
+  color: #fff;
+}
+
+.location-section {
+  width: 100%;
+}

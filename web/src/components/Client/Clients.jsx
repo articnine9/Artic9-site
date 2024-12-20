@@ -15,7 +15,7 @@ import DigiMart from "../../Assets/clients-logo/Digi-Mart.png";
 import FirstLoan from "../../Assets/clients-logo/first-loan.jpg";
 import GT from "../../Assets/clients-logo/GT.png";
 import Hairways from "../../Assets/clients-logo/Hairways.png";
-import HarrisNadar from "../../Assets/clients-logo/Harris-nadar.png";
+import HarrisNadar from "../../Assets/clients-logo/Harris Nadar Logo BlaCK.png";
 import Karpagam from "../../Assets/clients-logo/karpagam.jpg";
 import MarthaGapharma from "../../Assets/clients-logo/marthagapharma.jpg";
 import Platez from "../../Assets/clients-logo/Platez.png";
@@ -33,6 +33,11 @@ import Votto from "../../Assets/clients-logo/votto.jpg";
 import YMCA from "../../Assets/clients-logo/ymca.jpg";
 import Tino from "../../Assets/clients-logo/tino-logo-gtm.png";
 import BNi from "../../Assets/clients-logo/Bni.png";
+import Varam from '../../Assets/clients-logo/Varam.png'
+import Vpr from '../../Assets/clients-logo/vpr-logo.png'
+import Gb from '../../Assets/clients-logo/GB.png'
+import Fuji from '../../Assets/clients-logo/Fuji.png'
+import Jd from '../../Assets/clients-logo/JD Wood.png'
 
 const clients = [
   {
@@ -86,8 +91,18 @@ const clients = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
+    src: Fuji,
+    alt: "Fuji Otis Monarch",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
     src: DigiMart,
     alt: "Digi Mart",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Jd,
+    alt: "JD Wood Industries",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
@@ -116,6 +131,16 @@ const clients = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
+    src: Varam,
+    alt: "Varam Hospital",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Gb,
+    alt: "Greatest Bakery",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
     src: Sident,
     alt: "Si-dent Dental clinic",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
@@ -123,6 +148,11 @@ const clients = [
   {
     src: ClearEye,
     alt: "Clear Eye Optics",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Vpr,
+    alt: "VPR construction",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {

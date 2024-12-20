@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
 import GT from "../../Assets/carousal/gt-bg.png";
 import BNI from "../../Assets/carousal/bni-bgs.png";
@@ -12,7 +13,7 @@ import Aksh from "../../Assets/carousal/akshya-bg.png";
 import gtlogo from "../../Assets/gt-logo.png";
 import bnilogo from "../../Assets/clients-logo/Bni.png";
 import atlogo from "../../Assets/clients-logo/at.png";
-import harrislogo from "../../Assets/clients-logo/Harris-nadar.png";
+import harrislogo from "../../Assets/clients-logo/Harris Nadar Logo BlaCK.png";
 import tinologo from "../../Assets/clients-logo/tino-logo-gtm.png";
 import dellogo from "../../Assets/clients-logo/Delano.png";
 
@@ -55,7 +56,19 @@ const CarouselComponent = () => {
       "faster for the fastest internet brand",
     ],
   ];
+  const navigate = useNavigate();
+  const handleLearnMoreClick = (index) => {
+    const routes = [
+      "/gtholidays",
+      "/",
+      "/",
+      "/harrisnadar",
+      "/tinoengineering",
+      "/",
+    ];
 
+    navigate(routes[index]);
+  };
   const images1 = [
     Aksh,
     "https://picsum.photos/id/456/1200/400",
@@ -64,42 +77,43 @@ const CarouselComponent = () => {
   const smllogos = [akshlogo];
 
   const images2 = [
-    "https://picsum.photos/id/123/1200/400",
-    "https://picsum.photos/id/456/1200/400",
     "https://picsum.photos/id/678/1200/400",
+    "https://picsum.photos/id/456/1200/400",
+    "https://picsum.photos/id/123/1200/400",
   ];
 
-  // const [activeIndex1, setActiveIndex1] = useState(0);
-  // const [activeIndex2, setActiveIndex2] = useState(0);
-  // const [activeIndex3, setActiveIndex3] = useState(0);
+  // eslint-disable-next-line no-unused-vars
+  const [activeIndex1, setActiveIndex1] = useState(0);
+  // eslint-disable-next-line no-unused-vars
+  const [activeIndex2, setActiveIndex2] = useState(0);
+  // eslint-disable-next-line no-unused-vars
+  const [activeIndex3, setActiveIndex3] = useState(0);
 
-  // useEffect(() => {
-  //   const interval1 = setInterval(() => {
-  //     setActiveIndex1((prevIndex) => (prevIndex + 1) % images.length);
-  //   }, 3000);
-  //   return () => clearInterval(interval1);
-  // }, [images.length]);
+  useEffect(() => {
+    const interval1 = setInterval(() => {
+      setActiveIndex1((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval1);
+  }, [images.length]);
 
-  // useEffect(() => {
-  //   const interval2 = setInterval(() => {
-  //     setActiveIndex2((prevIndex) => (prevIndex + 1) % images.length);
-  //   }, 4000);
-  //   return () => clearInterval(interval2);
-  // }, [images.length]);
+  useEffect(() => {
+    const interval2 = setInterval(() => {
+      setActiveIndex2((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval2);
+  }, [images.length]);
 
-  // useEffect(() => {
-  //   const interval3 = setInterval(() => {
-  //     setActiveIndex3((prevIndex) => (prevIndex + 1) % images.length);
-  //   }, 5000);
-  //   return () => clearInterval(interval3);
-  // }, [images.length]);
+  useEffect(() => {
+    const interval3 = setInterval(() => {
+      setActiveIndex3((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval3);
+  }, [images.length]);
 
-  
   return (
     <div className="carousel-container">
-
       <div className="carousel-section1">
-        <Carousel pause="false" interval={113000}>
+        <Carousel pause="false" interval={3000}>
           {images.map((image, index) => (
             <Carousel.Item key={index}>
               <div className="imgs">
@@ -118,7 +132,12 @@ const CarouselComponent = () => {
 
                     <div className="slider-btn">
                       <img src={logos[index]} alt="logo" className="logo" />
-                      <button className="more-btn">Learn more</button>
+                      <button
+                        className="more-btn"
+                        onClick={() => handleLearnMoreClick(index)}
+                      >
+                        Learn more
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -129,9 +148,8 @@ const CarouselComponent = () => {
       </div>
 
       <div className="carousel-section2">
-
         <div className="sml-carousal">
-          <Carousel pause="false" interval={11114000}>
+          <Carousel pause="false" interval={4000}>
             {images1.map((src, index) => (
               <Carousel.Item key={index}>
                 <div
@@ -149,7 +167,7 @@ const CarouselComponent = () => {
                     <br />
                     <span className="sml-secondline">
                       Lorem ipsum dolor sit amet.
-                    </span> 
+                    </span>
                     <div className="sml-slider-btn">
                       <img
                         src={smllogos[index]}
@@ -178,7 +196,6 @@ const CarouselComponent = () => {
             ))}
           </Carousel>
         </div>
-
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import "./CaseStudy.css";
-import Counter from '../Case study/Counter'
-import Nextpage from '../Case study/Nextpage'
+import Counter from "../Case study/Counter";
+import Nextpage from "../Case study/Nextpage";
 import gtbanner from "../../../Assets/case-study/gt-holidays/gt-banner.jpg";
 import abtpic from "../../../Assets/case-study/gt-holidays/about-gt.webp";
 import secimage1 from "../../../Assets/case-study/gt-holidays/identity-img.webp";
@@ -9,7 +9,7 @@ import secimage2 from "../../../Assets/case-study/gt-holidays/identity-img2.webp
 import post1 from "../../../Assets/case-study/gt-holidays/instagram01.webp";
 import post2 from "../../../Assets/case-study/gt-holidays/instagram02.webp";
 import post3 from "../../../Assets/case-study/gt-holidays/instagram03.webp";
-
+import hnbanner from '../../../Assets/harris2.png'
 const Gt = () => {
   return (
     <div className="gt">
@@ -171,7 +171,12 @@ const Gt = () => {
 
         <Counter />
 
-        <Nextpage />
+        <Nextpage
+          title="Harris Nadar"
+          imageUrl={hnbanner}
+          altText="Harris Nadar Banner"
+          route="/harrisnadar"
+        />
       </div>
     </div>
   );

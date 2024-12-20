@@ -43,7 +43,6 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-
 }
 
 .gt-abt-img {
@@ -88,12 +87,10 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  /* border: 1px solid;  */
 }
-.gt-section{
+.gt-section {
   background-image: url(../../../Assets/24427649_re_406.jpg);
   background-size: contain;
-
 }
 .gt-abt-section {
   background-image: url(../../../Assets/case-study/gt-holidays/bg\ 3.jpg);
@@ -157,17 +154,295 @@
   transform: scale(1.05);
 }
 
-
 /* ----------------------------------------------Harris-Nadar----------------------------------------------------------- */
+.hn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hn-main {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hn-banner {
+  width: 95%;
+}
+.hn-banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.hn-cnt {
+  width: 65%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hn-cnt-img {
+  width: 50%;
+}
+.hn-cnt-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
 
+.hn-cntnts {
+  width: 50%;
+}
 
+.hn-cntnts-head {
+  margin-top: 65px;
+}
+.hn-cntnts-head span {
+  margin-top: 20px;
+  display: inline-block;
+  font-family: "Anton";
+}
+.hn-cntnts-head h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.hn-gallery {
+  width: 65%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 25px 0px;
+}
+.hn-case {
+  width: 32.26%;
+}
 
+.hn-case img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.hn-faq {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #ffcc01;
+  padding: 100px 0px;
+}
+
+.hn-faq-main {
+  width: 80%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hn-faq-head {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.hn-faq-head h2 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+.hn-faq-img {
+  height: 700px;
+  width: 82%;
+  display: flex;
+  justify-content: space-around;
+}
+.faq-img,
+.faq-img1 {
+  height: 100%;
+  width: 40%;
+}
+.faq-img img,
+.faq-img2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.faq-img1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.faq-img2 {
+  width: 100%;
+  height: 49%;
+}
+.gp {
+  width: 15%;
+}
+
+.hn-faq-cnts {
+  width: 82%;
+  text-align: justify;
+  margin-top: 50px;
+}
+.hn-video-sec {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.hn-video-main {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 100px 0px;
+}
+.hn-video {
+  width: 100%;
+}
+.hn-video-min {
+  width: 49.1%;
+}
+
+/* ----------------------------------------------Tino-Engineering----------------------------------------------------------- */
+
+.te {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.te-main {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.te-banner {
+  width: 100%;
+}
+.te-banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.te-cnt {
+  width: 65%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 90px 0px;
+}
+.te-cnt-img {
+  width: 50%;
+}
+.te-cnt-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.te-cntnts {
+  width: 50%;
+}
+
+.te-cntnts-head {
+  margin-top: 65px;
+}
+.te-cntnts-head span {
+  margin-top: 20px;
+  display: inline-block;
+  font-family: "Anton";
+}
+.te-cntnts-head h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.te-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url(../../../Assets/24427649_re_406.jpg);
+  background-size: cover;
+}
+
+.te-sec-cnt {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.te-sec-cnt h2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 1.208;
+}
+.te-post {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 50px 0px;
+}
+
+.te-post-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+.te-blog {
+  width: 100%;
+}
+.te-blog h5 {
+  font-weight: 500;
+  line-height: 1.2;
+}
+.te-blog p {
+  font-family: poppins, sans-serif;
+  font-size: 14px;
+}
+.te-post-img {
+  width: 23%;
+}
+.te-post-img:hover img {
+  transform: scale(1.05);
+}
 /* ----------------------------------------------Counter-section----------------------------------------------------------- */
 
 .cont {
   text-align: center;
   margin: 120px 0px;
-
 }
 .cont h3 {
   margin-bottom: 100px;
@@ -231,11 +506,11 @@
 
 .next-page-sec {
   width: 42%;
-  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding: 25px 0px;
 }
 
 .next-page-head {
@@ -248,9 +523,13 @@
   font-size: 50px;
   position: relative;
 }
-.next-page-cnt p{
+
+.next-page-cnt p {
   margin-bottom: 0;
+  display: inline-block; 
+  position: relative;
 }
+
 .svg {
   transition: transform 0.3s ease-in-out;
 }
@@ -271,23 +550,24 @@
 }
 
 .next-page-container:hover .svg {
-  transform: translateX(20px); 
+  transform: translateX(20px);
 }
+
 .next-page-container:hover .next-page-cnt p {
   position: relative;
 }
 
 .next-page-container .next-page-cnt p::after {
-  content: '';
+  content: "";
   position: absolute;
-  bottom: -5px; 
+  bottom: -5px;
   left: 0;
-  width: 0%;  
+  width: 0%;
   height: 2px;
-  background-color: black; 
-  transition: width 0.3s ease-in-out; 
+  background-color: black;
+  transition: width 0.3s ease-in-out;
 }
 
 .next-page-container:hover .next-page-cnt p::after {
-  width: 43%;  
+  width: 100%; 
 }

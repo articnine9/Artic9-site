@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import "./Work.css";
 
-import model1 from "../../Assets/modal/mandalay-lake-monochrome.jpg";
-import model2 from "../../Assets/modal/cool-coffee-india-tea-leaves-forest.jpg";
-import model3 from "../../Assets/modal/beautiful-landscape-with-green-grass-breathtaking-view-rainbow-storm-clouds.jpg";
-import model4 from "../../Assets/modal/beautiful-view-mesmerizing-nature-traditional-styled-japanese-adelaide-himeji-gardens.jpg";
-import model5 from "../../Assets/modal/mountain-covered-with-fogs.jpg";
-import model6 from "../../Assets/modal/munnar-tea-plantations-with-fog-early-morning.jpg";
-import model7 from "../../Assets/modal/rock-ban-forest-tropical-beautiful-jungle.jpg";
-import model8 from "../../Assets/modal/seoraksan-mountains-is-covered-by-morning-fog-sunrise-seoul-korea.jpg";
-import model9 from "../../Assets/modal/vertical-shot-river-surrounded-by-mountains-meadows-scotland.jpg";
-import model10 from "../../Assets/modal/cascade-park-stone-flow-splash-ban.jpg";
-import model11 from "../../Assets/modal/fresh-blue-nature-shore-waterfall-river.jpg";
-import model12 from "../../Assets/modal/tree-silhouette-fog-dark-landscape-terrain-generative-ai.jpg";
-import model13 from "../../Assets/modal/wet-vietnam-mountain-flow-stream-rural.jpg";
+import model1 from "../../Assets/modal/mandalay-lake-monochrome-min.jpg";
+import model2 from "../../Assets/modal/cool-coffee-india-tea-leaves-forest-min.jpg";
+import model3 from "../../Assets/modal/beautiful-landscape-with-green-grass-breathtaking-view-rainbow-storm-clouds-min.jpg";
+import model4 from "../../Assets/modal/beautiful-view-mesmerizing-nature-traditional-styled-japanese-adelaide-himeji-gardens-min.jpg";
+import model5 from "../../Assets/modal/mountain-covered-with-fogs-min.jpg";
+import model6 from "../../Assets/modal/munnar-tea-plantations-with-fog-early-morning-min.jpg";
+import model7 from "../../Assets/modal/rock-ban-forest-tropical-beautiful-jungle-min.jpg";
+import model8 from "../../Assets/modal/seoraksan-mountains-is-covered-by-morning-fog-sunrise-seoul-korea-min.jpg";
+import model9 from "../../Assets/modal/vertical-shot-river-surrounded-by-mountains-meadows-scotland-min.jpg";
+import model10 from "../../Assets/modal/cascade-park-stone-flow-splash-ban-min.jpg";
+import model11 from "../../Assets/modal/fresh-blue-nature-shore-waterfall-river-min.jpg";
+import model12 from "../../Assets/modal/tree-silhouette-fog-dark-landscape-terrain-generative-ai-min.jpg";
+import model13 from "../../Assets/modal/wet-vietnam-mountain-flow-stream-rural-min.jpg";
 
 import { Link } from "react-router-dom";
 
@@ -23,158 +23,156 @@ const Work = () => {
       imgSrc: model2,
       heading: "GT Holidays",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
-      category: "Branding . UI & UX Designs . Product Development",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      category: "Branding",
       link: "/gtholidays",
     },
     {
       imgSrc: model3,
       heading: "Harris Nadar",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
       link: "/harrisnadar",
-      category: "Branding . UI & UX Designs . Product Development",
+      category: "Video production",
     },
     {
       imgSrc: model4,
       heading: "Tino Engineering",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
       link: "/tinoengineering",
-      category: "Branding . UI & UX Designs . Product Development",
+      category: "Website",
     },
     {
       imgSrc: model5,
-      heading: "Heading",
+      heading: "Anandha Bhavan",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
       link: "/gtholidays",
-      category: "Branding . UI & UX Designs . Product Development",
+      category: "Marketing & Social",
     },
     {
       imgSrc: model6,
-      heading: "Heading",
+      heading: "Fuji",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
       link: "/gtholidays",
-      category: "Branding . UI & UX Designs . Product Development",
+      category: "SEO",
     },
     {
       imgSrc: model1,
-      heading: "Heading",
+      heading: "Aksha ya",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
       link: "/gtholidays",
-      category: "Branding . UI & UX Designs . Product Development",
+      category: "SEO",
     },
     {
       imgSrc: model9,
-      heading: "Heading",
+      heading: "Karpagam",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
       link: "/gtholidays",
-      category: "Branding . UI & UX Designs . Product Development",
+      category: "Branding",
     },
     {
       imgSrc: model7,
-      heading: "Heading",
+      heading: "DCS Technology",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
       link: "/gtholidays",
-      category: "Branding . UI & UX Designs . Product Development",
+      category: "Website",
     },
     {
       imgSrc: model8,
-      heading: "Heading",
+      heading: "Rajan & co",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
       link: "/gtholidays",
-      category: "Branding . UI & UX Designs . Product Development",
+      category: "Marketing & Social",
     },
   ];
 
   const sideSections = [
     {
       imgSrc: model2,
-      heading: "Heading",
+      heading: "Platez",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
-      category: "Branding . UI & UX Designs . Product Development",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      category: "Marketing & Social",
       link: "/gtholidays",
     },
     {
       imgSrc: model3,
-      heading: "Heading",
+      heading: "Toni & Guy",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
-      category: "Branding . UI & UX Designs . Product Development",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      category: "Branding",
       link: "/gtholidays",
     },
     {
       imgSrc: model4,
-      heading: "Heading",
+      heading: "At broadband",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
-      category: "Branding . UI & UX Designs . Product Development",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      category: "SEO",
       link: "/gtholidays",
     },
-
     {
       imgSrc: model5,
-      heading: "Heading",
+      heading: "Delano",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
-      category: "Branding . UI & UX Designs . Product Development",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      category: "Video Production",
       link: "/gtholidays",
     },
     {
       imgSrc: model1,
-      heading: "Heading",
+      heading: "Pragrup",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
       link: "/gtholidays",
-      category: "Branding . UI & UX Designs . Product Development",
+      category: "Website",
     },
     {
       imgSrc: model9,
-      heading: "Heading",
+      heading: "Titan",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
       link: "/gtholidays",
-      category: "Branding . UI & UX Designs . Product Development",
+      category: "Marketing & Social",
     },
-
     {
       imgSrc: model10,
-      heading: "Heading",
+      heading: "Arunachala",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
       link: "/gtholidays",
-      category: "Branding . UI & UX Designs . Product Development",
+      category: "Video Production",
     },
     {
       imgSrc: model11,
-      heading: "Heading",
+      heading: "Sheffield",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
       link: "/gtholidays",
-      category: "Branding . UI & UX Designs . Product Development",
+      category: "Website",
     },
     {
       imgSrc: model12,
-      heading: "Heading",
+      heading: "Thasor Musicals",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
       link: "/gtholidays",
-      category: "Branding . UI & UX Designs . Product Development",
+      category: "Website",
     },
     {
       imgSrc: model13,
-      heading: "Heading",
+      heading: "Hairways",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, quos.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
       link: "/gtholidays",
-      category: "Branding . UI & UX Designs . Product Development",
+      category: "Branding",
     },
   ];
 
@@ -183,6 +181,19 @@ const Work = () => {
   const handleClick = (category) => {
     setClickedCategory(category);
   };
+
+  const filteredSections = clickedCategory
+    ? sections.filter(
+        (section) =>
+          section.category.toLowerCase() === clickedCategory.toLowerCase()
+      )
+    : sections;
+
+  const filteredSideSections = clickedCategory
+    ? sideSections.filter(
+        (side) => side.category.toLowerCase() === clickedCategory.toLowerCase()
+      )
+    : sideSections;
 
   return (
     <div className="work-main">
@@ -195,17 +206,20 @@ const Work = () => {
             <ul>
               {[
                 "All Works",
-                "Category1",
-                "Category2",
-                "Category3",
-                "Category4",
+                "SEO",
+                "Branding",
+                "Website",
+                "Video Production",
+                "Marketing & Social",
               ].map((category, index) => (
                 <li
                   key={index}
                   className={`category-list ${
                     clickedCategory === category ? "clicked" : ""
                   }`}
-                  onClick={() => handleClick(category)}
+                  onClick={() =>
+                    handleClick(category === "All Works" ? null : category)
+                  }
                 >
                   {category}
                 </li>
@@ -214,7 +228,7 @@ const Work = () => {
           </div>
         </div>
         <div className="work-section">
-          {sections.map((section, index) => (
+          {filteredSections.map((section, index) => (
             <Link
               to={section.link}
               key={index}
@@ -233,9 +247,8 @@ const Work = () => {
           ))}
         </div>
 
-        {/* Mapping the side sections */}
         <div className="work-side">
-          {sideSections.map((side, index) => (
+          {filteredSideSections.map((side, index) => (
             <Link to={side.link} key={index} className="work-side-sec">
               <div className="side-img">
                 <img src={side.imgSrc} alt={side.heading} />
