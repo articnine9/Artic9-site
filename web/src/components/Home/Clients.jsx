@@ -39,8 +39,6 @@ import BNi from "../../Assets/clients-logo/Bni.png";
 import Vpr from '../../Assets/clients-logo/vpr-logo.png'
 // import Gb from '../../Assets/clients-logo/GB.png'
 // import Fuji from '../../Assets/clients-logo/Fuji.png'
-
-
 import Jd from '../../Assets/clients-logo/JD Wood.png'
 
 import { Link } from "react-router-dom";
