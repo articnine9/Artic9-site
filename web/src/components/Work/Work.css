@@ -50,12 +50,18 @@
   list-style: disc;
 }
 
-.work-section {
-  width: 60%;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.work-area {
+  width: 100%;
   margin-top: 100px;
+}
+
+.work-section {
+  width: 70%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* border: 1px solid; */
 }
 
 .work-sec {
@@ -84,7 +90,6 @@
   width: 100%;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
-  
 }
 .work-sec:hover .wrk-img img {
   transform: scale(1);
@@ -99,35 +104,57 @@
 .wrk-cnt span {
   font-size: 15px;
 }
+
+
 .sec-1,
-.sec-6 {
+.sec-6,
+.sec-11,
+.sec-16,
+.sec-21 {
   width: 63%;
 }
 .sec-2,
-.sec-7 {
+.sec-7,
+.sec-12,
+.sec-17 {
   width: 30%;
 }
 .sec-3,
 .sec-4,
-.sec-5 {
+.sec-5,
+.sec-13,
+.sec-14,
+.sec-15 {
   width: 30%;
 }
 
 .sec-8,
-.sec-9 {
+.sec-9,
+.sec-18,
+.sec-19 {
   width: 47%;
 }
+.sec-10,
+.sec-20 {
+  width: 100%;
+}
+
 
 .work-side {
-  width: 40%;
+  width: 30%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  /* border: 1px solid; */
 }
+
 .work-side-sec {
   width: 90%;
-  height: 200px;
+  height: 180px;
   text-decoration: none;
   color: #000;
   display: flex;
@@ -137,7 +164,7 @@
 }
 
 .side-img {
-  width: 30%;
+  width: 40%;
   height: 90%;
   display: flex;
   align-items: center;
@@ -146,13 +173,11 @@
 }
 
 .side-img img {
-  height: 150px;
+  height: 120px;
   width: 100%;
-  border-radius: 30px;
-  
 }
 .side-cnt {
-  width: 70%;
+  width: 60%;
   height: 90%;
   display: flex;
   align-items: center;
@@ -173,4 +198,8 @@
 }
 .side-category {
   margin-bottom: 20px;
+}
+
+.bold-text {
+  font: bold normal 13px "Roboto", serif !important;
 }

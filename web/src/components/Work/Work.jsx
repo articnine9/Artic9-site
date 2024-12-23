@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Work.css";
 
 import model1 from "../../Assets/modal/mandalay-lake-monochrome-min.jpg";
@@ -22,72 +22,63 @@ const Work = () => {
     {
       imgSrc: model2,
       heading: "GT Holidays",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       category: "Branding",
       link: "/gtholidays",
     },
     {
       imgSrc: model3,
       heading: "Harris Nadar",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/harrisnadar",
       category: "Video production",
     },
     {
       imgSrc: model4,
       heading: "Tino Engineering",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/tinoengineering",
       category: "Website",
     },
     {
       imgSrc: model5,
       heading: "Anandha Bhavan",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/gtholidays",
       category: "Marketing & Social",
     },
     {
       imgSrc: model6,
       heading: "Fuji",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/gtholidays",
       category: "SEO",
     },
     {
       imgSrc: model1,
       heading: "Aksha ya",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/gtholidays",
       category: "SEO",
     },
     {
       imgSrc: model9,
       heading: "Karpagam",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/gtholidays",
       category: "Branding",
     },
     {
       imgSrc: model7,
       heading: "DCS Technology",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/gtholidays",
       category: "Website",
     },
     {
       imgSrc: model8,
       heading: "Rajan & co",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/gtholidays",
       category: "Marketing & Social",
     },
@@ -97,80 +88,70 @@ const Work = () => {
     {
       imgSrc: model2,
       heading: "Platez",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       category: "Marketing & Social",
       link: "/gtholidays",
     },
     {
       imgSrc: model3,
       heading: "Toni & Guy",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       category: "Branding",
       link: "/gtholidays",
     },
     {
       imgSrc: model4,
       heading: "At broadband",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       category: "SEO",
       link: "/gtholidays",
     },
     {
       imgSrc: model5,
       heading: "Delano",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       category: "Video Production",
       link: "/gtholidays",
     },
     {
       imgSrc: model1,
       heading: "Pragrup",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/gtholidays",
       category: "Website",
     },
     {
       imgSrc: model9,
       heading: "Titan",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/gtholidays",
       category: "Marketing & Social",
     },
     {
       imgSrc: model10,
       heading: "Arunachala",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/gtholidays",
       category: "Video Production",
     },
     {
       imgSrc: model11,
       heading: "Sheffield",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/gtholidays",
       category: "Website",
     },
     {
       imgSrc: model12,
       heading: "Thasor Musicals",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/gtholidays",
       category: "Website",
     },
     {
       imgSrc: model13,
       heading: "Hairways",
-      description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.   ",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/gtholidays",
       category: "Branding",
     },
@@ -182,18 +163,42 @@ const Work = () => {
     setClickedCategory(category);
   };
 
-  const filteredSections = clickedCategory
-    ? sections.filter(
+  // const filteredSections = clickedCategory
+  //   ? sections.filter(
+  //       (section) =>
+  //         section.category.toLowerCase() === clickedCategory.toLowerCase()
+  //     )
+  //   : sections;
+
+  const mergedSections = [...sections, ...sideSections];
+
+  const filteredMergedSections = clickedCategory
+    ? mergedSections.filter(
         (section) =>
           section.category.toLowerCase() === clickedCategory.toLowerCase()
       )
-    : sections;
+    : mergedSections;
 
-  const filteredSideSections = clickedCategory
-    ? sideSections.filter(
-        (side) => side.category.toLowerCase() === clickedCategory.toLowerCase()
-      )
-    : sideSections;
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const workArea = document.querySelector(".work-area");
+      const workAreaBottom = workArea.getBoundingClientRect().bottom;
+
+      if (workAreaBottom < window.innerHeight) {
+        setIsSticky(false);
+      } else {
+        setIsSticky(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="work-main">
@@ -227,46 +232,50 @@ const Work = () => {
             </ul>
           </div>
         </div>
-        <div className="work-section">
-          {filteredSections.map((section, index) => (
-            <Link
-              to={section.link}
-              key={index}
-              className={`work-sec sec-${index + 1}`}
-            >
-              <div className="wrk-img">
-                <img src={section.imgSrc} alt={section.heading} />
-              </div>
-              <div className="wrk-cnt">
-                <h4>{section.heading}</h4>
-                <span>{section.description}</span>
-                <br />
-                <span>{section.category}</span>
-              </div>
-            </Link>
-          ))}
-        </div>
 
-        <div className="work-side">
-          {filteredSideSections.map((side, index) => (
-            <Link to={side.link} key={index} className="work-side-sec">
-              <div className="side-img">
-                <img src={side.imgSrc} alt={side.heading} />
-              </div>
-              <div className="side-cnt">
-                <div className="side-head">
-                  <h4>{side.heading}</h4>
+        <div className="work-area">
+          <div className="work-section">
+            {filteredMergedSections.map((section, index) => (
+              <Link
+                to={section.link}
+                key={index}
+                className={`work-sec sec-${index + 1}`}
+              >
+                <div className="wrk-img">
+                  <img src={section.imgSrc} alt={section.heading} />
                 </div>
-                <div className="side-cntnts">
-                  <span>{side.description}</span>
+                <div className="wrk-cnt">
+                  <h4>{section.heading}</h4>
+                  <span>{section.description}</span>
+                  <br />
+                  <span className="bold-text">{section.category}</span>
                 </div>
-                <div className="side-category">
-                  <span>{side.category}</span>
+              </Link>
+            ))}
+          </div>
+
+          <div className={`work-side ${isSticky ? "sticky" : ""}`}>
+            {sideSections.map((side, index) => (
+              <Link to={side.link} key={index} className="work-side-sec">
+                <div className="side-img">
+                  <img src={side.imgSrc} alt={side.heading} />
                 </div>
-              </div>
-            </Link>
-          ))}
+                <div className="side-cnt">
+                  <div className="side-head">
+                    <h4>{side.heading}</h4>
+                  </div>
+                  <div className="side-cntnts">
+                    <span>{side.description}</span>
+                  </div>
+                  <div className="side-category">
+                    <span className="bold-text">{side.category}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
+        
       </div>
     </div>
   );
