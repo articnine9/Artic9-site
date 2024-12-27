@@ -16,14 +16,6 @@
   backdrop-filter: blur(10px);
 }
 
-.navcontainer {
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-}
-
 .navbar .logo {
   font-size: 24px;
   display: flex;
@@ -34,6 +26,14 @@
 
 .logo img {
   margin-top: 45px;
+}
+
+.navcontainer {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
 }
 
 .navbar .nav-links {
@@ -47,11 +47,40 @@
 }
 
 .navbar .nav-links li a {
-  color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-size: 18px;
 }
 
 .navbar .nav-links li a:hover {
   color: #ffca00;
+}
+
+.navbar.about-page .nav-links li a {
+  color: white !important;
+}
+
+.navbar.about-page .nav-links li a:hover {
+  color: #ffca00;
+}
+
+.navbar.about-page .logo img {
+  filter: brightness(0) invert(1);
+}
+
+.notification {
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  }
+
+.success {
+  background-color: #28a745; /* Green for success */
+}
+
+.error {
+  background-color: #dc3545; /* Red for error */
 }

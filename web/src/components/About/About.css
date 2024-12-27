@@ -1,0 +1,130 @@
+.about-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(0, 0, 0);
+  color: white;
+
+}
+
+.about {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+  margin-top: 150px ;
+}
+.storytitle {
+  width: 100%;
+}
+.storytitle h1 {
+  font-size: 130px;
+  text-transform: uppercase;
+}
+
+.story-img {
+  height: 100vh;
+  width: 100%;
+}
+
+.story-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.story-contents {
+  width: 100%;
+}
+.story-cnt {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 100px 0px;
+}
+
+.stry-abt {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.stry-head {
+  width: 50%;
+}
+.stry-head span {
+  line-height: 50px;
+  font-size: 55px;
+}
+
+.stry-abt1 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.story-cnt1 {
+  width: 100%;
+}
+.year-img {
+  height: 65%;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 50px;
+  position: relative;
+
+}
+
+.year-img h2 {
+  font-size: 650px;
+  font-weight: 500;
+  letter-spacing: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0%;
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.year-img h2 span {
+  opacity: 0;
+}
+
+.year-img img {
+  height: 445px;
+  width: 300px;
+  position: absolute;
+  z-index: 2;
+  margin-top: 88px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px,rgb(38, 57, 77) 0px 20px 30px -10px;
+  border: 1px solid rgb(160, 160, 160);
+  transition: transform 0.5s ease;
+}
+
+.year-cnt {
+  height: 35%;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 100px 0px;
+}
+.yearly-cnt {
+  width: 40%;
+  height: 100%;
+}
+.yearly-cnt img {
+  width: auto;
+  height: auto;
+  margin-bottom: 25px;
+  object-fit: contain;
+  object-position: center;
+}

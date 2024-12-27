@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Contact.css";
 
 import { FaUser } from "react-icons/fa";
@@ -8,6 +8,7 @@ import { FaArrowDown } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
 
 import contact from "../../Assets/contact-img.png";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -17,6 +18,17 @@ const Contact = () => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const [notification, setNotification] = useState(null);
+  let timeoutId = null;
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -25,22 +37,118 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    alert("Form submitted successfully!");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
+  const validateForm = () => {
+    let valid = true;
+    const newErrors = { ...errors };
+
+    if (!formData.name) {
+      newErrors.name = "Name is required";
+      valid = false;
+    } else {
+      newErrors.name = "";
+    }
+
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!formData.email) {
+      newErrors.email = "Email is required";
+      valid = false;
+    } else if (!emailPattern.test(formData.email)) {
+      newErrors.email = "Enter a valid email address";
+      valid = false;
+    } else {
+      newErrors.email = "";
+    }
+
+    const phonePattern = /^[0-9]{10}$/;
+    if (!formData.phone) {
+      newErrors.phone = "Phone number is required";
+      valid = false;
+    } else if (!phonePattern.test(formData.phone)) {
+      newErrors.phone = "Enter a valid 10-digit phone number";
+      valid = false;
+    } else {
+      newErrors.phone = "";
+    }
+
+    if (!formData.subject) {
+      newErrors.subject = "Subject is required";
+      valid = false;
+    } else {
+      newErrors.subject = "";
+    }
+
+    if (!formData.message) {
+      newErrors.message = "Message is required";
+      valid = false;
+    } else {
+      newErrors.message = "";
+    }
+
+    setErrors(newErrors);
+    return valid;
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setNotification(null);
+
+    if (!validateForm()) {
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setNotification({
+          type: "success",
+          message: "Form submitted successfully!",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setNotification({
+          type: "error",
+          message: "Error submitting form.",
+        });
+      }
+      if (timeoutId) clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        setNotification(null);
+      }, 5000);
+    } catch (error) {
+      console.error("Error:", error);
+      setNotification({
+        type: "error",
+        message: "An error occurred. Please try again.",
+      });
+      if (timeoutId) clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        setNotification(null);
+      }, 5000);
+    }
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, []);
+
   return (
     <div className="contact">
       <div className="contact-main">
-
         <div className="contact-banner">
           <h2>Contact us</h2>
         </div>
@@ -58,7 +166,6 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="form">
                 <div className="form-group">
                   <FaUser className="form-icon" />
-
                   <input
                     type="text"
                     name="name"
@@ -67,11 +174,11 @@ const Contact = () => {
                     placeholder="Enter your Name"
                     required
                   />
+                  {errors.name && <span className="error">{errors.name}</span>}
                 </div>
 
                 <div className="form-group">
                   <IoMdMail className="form-icon" />
-
                   <input
                     type="email"
                     name="email"
@@ -80,11 +187,13 @@ const Contact = () => {
                     placeholder="Enter your Email"
                     required
                   />
+                  {errors.email && (
+                    <span className="error">{errors.email}</span>
+                  )}
                 </div>
 
                 <div className="form-group">
                   <FaPhone className="form-icon" />
-
                   <input
                     type="tel"
                     name="phone"
@@ -93,11 +202,13 @@ const Contact = () => {
                     placeholder="Enter your Phone Number"
                     required
                   />
+                  {errors.phone && (
+                    <span className="error">{errors.phone}</span>
+                  )}
                 </div>
 
                 <div className="form-group">
                   <FaArrowDown className="form-icon" />
-
                   <input
                     type="text"
                     name="subject"
@@ -106,11 +217,13 @@ const Contact = () => {
                     placeholder="Enter your Subject"
                     required
                   />
+                  {errors.subject && (
+                    <span className="error">{errors.subject}</span>
+                  )}
                 </div>
 
                 <div className="form-group1">
                   <FaEdit className="form-icon" />
-
                   <textarea
                     name="message"
                     value={formData.message}
@@ -119,6 +232,9 @@ const Contact = () => {
                     rows="4"
                     required
                   />
+                  {errors.message && (
+                    <span className="error">{errors.message}</span>
+                  )}
                 </div>
 
                 <div className="form-group2">
@@ -128,6 +244,17 @@ const Contact = () => {
                 </div>
               </form>
             </div>
+
+            {/* Conditional notification */}
+            {notification && (
+              <div
+                className={`notification ${
+                  notification.type === "success" ? "success" : "error"
+                }`}
+              >
+                {notification.message}
+              </div>
+            )}
           </div>
         </div>
 
@@ -143,7 +270,6 @@ const Contact = () => {
             title="Google Map"
           ></iframe>
         </div>
-        
       </div>
     </div>
   );

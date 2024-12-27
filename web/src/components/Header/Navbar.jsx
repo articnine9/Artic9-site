@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../Assets/logo1.png"; 
+import logo from "../../Assets/logo1.png";
+import logoAbout from "../../Assets/logo2.png";  
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation(); 
+  const location = useLocation();
 
   const handleScroll = () => {
     if (window.scrollY > 1400) {
@@ -16,7 +17,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    if (location.pathname === "/") {
+    if (location.pathname === "/" ) {
       window.addEventListener("scroll", handleScroll);
     }
 
@@ -26,15 +27,17 @@ const Navbar = () => {
   }, [location.pathname]);
 
   const isOtherPage = location.pathname !== "/";
-
+  const isAboutPage = location.pathname === "/about"; 
   return (
     <nav
-      className={`navbar ${isScrolled ? "scrolled" : ""} ${isOtherPage ? "other-page" : ""}`}
+      className={`navbar ${isScrolled ? "scrolled" : ""} ${
+        isOtherPage ? "other-page" : ""
+      } ${isAboutPage ? "about-page" : ""}`}
     >
       <div className="navcontainer">
         <div className="logo">
           <Link to="/" aria-label="Go to homepage">
-            <img src={logo} alt="Company Logo" />
+            <img src={isAboutPage ? logoAbout : logo} alt="Company Logo" />
           </Link>
         </div>
         <ul className="nav-links">
