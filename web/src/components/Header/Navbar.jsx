@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../Assets/logo1.png";
-import logoAbout from "../../Assets/logo2.png";  
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false); // State to control the navbar
   const location = useLocation();
 
   const handleScroll = () => {
@@ -16,8 +16,12 @@ const Navbar = () => {
     }
   };
 
+  const handleNavbarToggle = () => {
+    setIsNavbarOpen(!isNavbarOpen); // Toggle navbar open state
+  };
+
   useEffect(() => {
-    if (location.pathname === "/" ) {
+    if (location.pathname === "/") {
       window.addEventListener("scroll", handleScroll);
     }
 
@@ -27,51 +31,70 @@ const Navbar = () => {
   }, [location.pathname]);
 
   const isOtherPage = location.pathname !== "/";
-  const isAboutPage = location.pathname === "/about"; 
+
   return (
     <nav
-      className={`navbar ${isScrolled ? "scrolled" : ""} ${
+      className={`navbar navbar-expand-lg bg-body-tertiary ${isScrolled ? "scrolled" : ""} ${
         isOtherPage ? "other-page" : ""
-      } ${isAboutPage ? "about-page" : ""}`}
+      }`}
     >
-      <div className="navcontainer">
-        <div className="logo">
-          <Link to="/" aria-label="Go to homepage">
-            <img src={isAboutPage ? logoAbout : logo} alt="Company Logo" />
-          </Link>
-        </div>
-        <ul className="nav-links">
-          <li>
-            <Link to="/work" aria-label="View Work">
+      <div className="container-fluid">
+        <Link to="/" className="navbar-brand" aria-label="Go to homepage">
+          <img src={logo} alt="Company Logo" />
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={handleNavbarToggle} 
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded={isNavbarOpen ? "true" : "false"}
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className={`collapse navbar-collapse ${isNavbarOpen ? "show" : ""}`} 
+          id="navbarNavAltMarkup"
+        >
+          <div className="navbar-nav">
+            <Link
+              to="/work"
+              className={`nav-link ${location.pathname === "/work" ? "active" : ""}`}
+            >
               Work
             </Link>
-          </li>
-          <li>
-            <Link to="/clients" aria-label="View Clients">
+            <Link
+              to="/clients"
+              className={`nav-link ${location.pathname === "/clients" ? "active" : ""}`}
+            >
               Clients
             </Link>
-          </li>
-          <li>
-            <Link to="/services" aria-label="View Services">
+            <Link
+              to="/services"
+              className={`nav-link ${location.pathname === "/services" ? "active" : ""}`}
+            >
               Services
             </Link>
-          </li>
-          <li>
-            <Link to="/about" aria-label="Learn About Us">
+            <Link
+              to="/about"
+              className={`nav-link ${location.pathname === "/about" ? "active" : ""}`}
+            >
               About
             </Link>
-          </li>
-          <li>
-            <Link to="/blog" aria-label="Read our Blog">
+            <Link
+              to="/blog"
+              className={`nav-link ${location.pathname === "/blog" ? "active" : ""}`}
+            >
               Blog
             </Link>
-          </li>
-          <li>
-            <Link to="/contact" aria-label="Contact Us">
+            <Link
+              to="/contact"
+              className={`nav-link ${location.pathname === "/contact" ? "active" : ""}`}
+            >
               Contact
             </Link>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </nav>
   );

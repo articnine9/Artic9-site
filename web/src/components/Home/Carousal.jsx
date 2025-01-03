@@ -82,11 +82,8 @@ const CarouselComponent = () => {
     "https://picsum.photos/id/123/1200/400",
   ];
 
-  // eslint-disable-next-line no-unused-vars
   const [activeIndex1, setActiveIndex1] = useState(0);
-  // eslint-disable-next-line no-unused-vars
   const [activeIndex2, setActiveIndex2] = useState(0);
-  // eslint-disable-next-line no-unused-vars
   const [activeIndex3, setActiveIndex3] = useState(0);
 
   useEffect(() => {
@@ -185,13 +182,34 @@ const CarouselComponent = () => {
 
         <div className="sml-carousal1">
           <Carousel pause="false" interval={5000}>
-            {images2.map((src, index) => (
+            {images2.map((src, index) => ( 
               <Carousel.Item key={index}>
-                <img
-                  className="d-block sml-img"
-                  src={src}
+                <div
+                  className=" sml-img"
+                  style={{ backgroundImage: `url(${src})` }}
                   alt={`small-slide-${index}`}
-                />
+                >
+                  <div className="gap"></div>
+
+                  <div className="sml-pstr-cnt">
+                    <span className="sml-mainline">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Magnam, nobis!
+                    </span>
+                    <br />
+                    <span className="sml-secondline">
+                      Lorem ipsum dolor sit amet.
+                    </span>
+                    <div className="sml-slider-btn">
+                      <img
+                        src={smllogos[index]}
+                        alt="logo"
+                        className="sml-logo"
+                      />
+                      <button className="sml-more-btn">Learn more</button>
+                    </div>
+                  </div>
+                </div>
               </Carousel.Item>
             ))}
           </Carousel>

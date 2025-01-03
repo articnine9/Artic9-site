@@ -366,15 +366,22 @@
   width: 100%;
   margin: 50px 0px;
 }
+
 .client-slider {
+  height: 120px;
+  width: 20%;
+  /* border: 1px solid; */
   margin: 10px 0px !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .client-slider img {
-  object-fit: cover;
+  height: 70%;
+  width: 70%;
+  object-fit: contain; 
+  /* border: 1px solid; */
 }
 .ourclients {
   width: 100%;

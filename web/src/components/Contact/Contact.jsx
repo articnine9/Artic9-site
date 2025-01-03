@@ -153,11 +153,11 @@ const Contact = () => {
           <h2>Contact us</h2>
         </div>
 
-        <div className="contact-section row">
-          <div className="contact-sec col-lg-6 col-md-12">
+        <div className="contact-section ">
+          <div className="contact-sec ">
             <img src={contact} alt="contact" />
           </div>
-          <div className="contact-sec1 col-lg-6 col-md-12">
+          <div className="contact-sec1">
             <div className="contact-head">
               <span>Come, Share Your Thoughts</span>
               <h2>With us</h2>

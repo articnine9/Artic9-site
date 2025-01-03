@@ -29,6 +29,7 @@
 .contact-section {
   width: 80%;
   padding: 100px 0px;
+  display: flex;
 }
 
 .contact-sec,
@@ -46,7 +47,6 @@
   width: 100%;
   margin-bottom: 45px;
   color: #454545;
-
 }
 .contact-head span {
   font-family: "Anton", sans-serif;
@@ -56,7 +56,6 @@
   line-height: 1.208;
   font-family: "Anton", sans-serif;
   letter-spacing: 1px;
-
 }
 
 .contact-form {
@@ -137,4 +136,68 @@ textarea:active {
 
 .location-section {
   width: 100%;
+}
+
+/* responsiveness */
+
+@media (max-width: 1320px) {
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .form-group {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact-section {
+    display: block;
+  }
+  .contact-sec,
+  .contact-sec1 {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .form-group {
+    width: 48%;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .contact-section {
+    display: block;
+  }
+  .contact-sec,
+  .contact-sec1 {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .form-group {
+    width: 48%;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .contact-section {
+    display: block;
+  }
+  .contact-sec,
+  .contact-sec1 {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .form-group {
+    width: 48%;
+  }
+}
+@media (max-width: 426px) {
+  .contact-section {
+    display: block;
+  }
+  .contact-sec,
+  .contact-sec1 {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .form-group {
+    width: 100%;
+  }
 }

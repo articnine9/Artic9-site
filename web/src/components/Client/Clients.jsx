@@ -33,196 +33,234 @@ import Votto from "../../Assets/clients-logo/votto.jpg";
 import YMCA from "../../Assets/clients-logo/ymca.jpg";
 import Tino from "../../Assets/clients-logo/tino-logo-gtm.png";
 import BNi from "../../Assets/clients-logo/Bni.png";
-import Varam from '../../Assets/clients-logo/Varam.png'
-import Vpr from '../../Assets/clients-logo/vpr-logo.png'
-import Gb from '../../Assets/clients-logo/GB.png'
-import Fuji from '../../Assets/clients-logo/Fuji.png'
-import Jd from '../../Assets/clients-logo/JD Wood.png'
+import Varam from "../../Assets/clients-logo/Varam.png";
+import Vpr from "../../Assets/clients-logo/vpr-logo.png";
+import Gb from "../../Assets/clients-logo/GB.png";
+import Fuji from "../../Assets/clients-logo/Fuji.png";
+import Jd from "../../Assets/clients-logo/JD Wood.png";
+import { Link } from "react-router-dom";
 
 const clients = [
   {
     src: HarrisNadar,
     alt: "Harris Nadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+    link: "/harrisnadar",
   },
   {
     src: AT,
     alt: "At Broadband",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: GT,
     alt: "GT Holidyas",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+    link: "/gtholidays",
   },
   {
     src: Titan,
     alt: "Titan World",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: TG,
     alt: "Tony & Guy",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Snowch,
     alt: "Snowch",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Arunachala,
     alt: "Arunachala College",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Pragurp,
     alt: "Pragurp Architecture",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: ColdAir,
     alt: "Cold Air Conditioning",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Delano,
     alt: "Delano Residency",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Fuji,
     alt: "Fuji Otis Monarch",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: DigiMart,
     alt: "Digi Mart",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Jd,
     alt: "JD Wood Industries",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Ayutha,
     alt: "Ayuta Caterer",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Hairways,
     alt: "Hairways Salon",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: BrandPartners,
     alt: "Brand Partners",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Platez,
     alt: "Platez",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: RajanCo,
     alt: "Rajan & Co",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Varam,
     alt: "Varam Hospital",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Gb,
     alt: "Greatest Bakery",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Sident,
     alt: "Si-dent Dental clinic",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: ClearEye,
     alt: "Clear Eye Optics",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Vpr,
     alt: "VPR construction",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Thasor,
     alt: "Thasor Musicals",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: AnandaBhavan,
     alt: "Ananda Bhavan",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: TGImage,
     alt: "Tony & Guy essensuals",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: DCS,
     alt: "DCS Technology",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Akshaya,
     alt: "Akshaya Catering ",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Karpagam,
     alt: "Karpagam Jwellers",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: MarthaGapharma,
     alt: "Marthahan pharma",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: TitanEyePlus,
     alt: "Titan Eye Plus",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: YMCA,
     alt: "YMCA",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Votto,
     alt: "Votto",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Spring,
     alt: "Spring Fertility Centre",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: FirstLoan,
     alt: "First Loan",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Tino,
     alt: "Tino Engineering",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+    link: "/tinoengineering",
   },
   {
     src: BNi,
     alt: "BNI Kanya",
+    link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
 ];
@@ -241,16 +279,17 @@ const Clients = () => {
 
   const handleMouseMove = (event) => {
     setTooltipPosition({
-      x: event.clientX + window.scrollX + 20,  
-      y: event.clientY + window.scrollY - -20,  
+      x: event.clientX + window.scrollX + 20,
+      y: event.clientY + window.scrollY - -20,
     });
   };
   return (
-<div className="clients-main">
+    <div className="clients-main">
       <h3 className="clients-head">Our Trusted Partners</h3>
       <div className="client-sec">
         {clients.map((client, index) => (
-          <div
+          <Link
+            to={client.link}
             key={index}
             className="client-logo"
             onMouseEnter={() => handleMouseEnter(client)}
@@ -258,7 +297,7 @@ const Clients = () => {
             onMouseMove={handleMouseMove}
           >
             <img src={client.src} alt={client.alt} />
-          </div>
+          </Link>
         ))}
         {tooltip && (
           <div

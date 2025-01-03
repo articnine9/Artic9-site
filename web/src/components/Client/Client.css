@@ -9,7 +9,7 @@
 }
 
 .clients-head {
-  font-size: 50px;
+  font-size: 4rem;
   font-family: "Anton", sans-serif;
   margin-top: 80px;
   color: #ffca00;
@@ -78,4 +78,26 @@
 .tooltip p,
 .tltip-head {
   text-align: center;
+}
+@media (max-width: 479px) {
+  .client-sec {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 320px) {
+  .client-sec {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+  }
+.clients-head {
+  font-size: 2  rem;
+}
 }

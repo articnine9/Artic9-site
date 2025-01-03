@@ -7,7 +7,7 @@ import pic1 from "../../Assets/leo.jpg";
 import pic2 from "../../Assets/lio.jpg";
 import pic3 from "../../Assets/fox.jpg";
 import pic4 from "../../Assets/panda.jpg";
-import logo from "../../Assets/logo2.png";
+import logo from "../../Assets/logo1.png";
 
 import "./About.css";
 const About = () => {
@@ -16,7 +16,7 @@ const About = () => {
       duration: 500,
       easing: "ease-out",
       once: false,
-      offset: 100,
+      offset:100,
     });
 
     AOS.refresh();
@@ -106,6 +106,25 @@ const About = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="team-details">
+          <div className="team-dtl">
+            <span>20</span>
+            <p>Crew Members</p>
+          </div>
+          <div className="team-dtl">
+            <span>10</span>
+            <p>Years Carved in Excellence</p>
+          </div>
+          <div className="team-dtl">
+            <span>100+</span>
+            <p>Visions Brought to Life</p>
+          </div>
+          <div className="team-dtl1">
+            <span>Nagercoil</span>
+            <p>Headquarters</p>
+          </div>
         </div>
       </div>
     </div>

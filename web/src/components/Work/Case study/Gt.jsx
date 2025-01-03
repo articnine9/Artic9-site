@@ -9,7 +9,7 @@ import secimage2 from "../../../Assets/case-study/gt-holidays/identity-img2.webp
 import post1 from "../../../Assets/case-study/gt-holidays/instagram01.webp";
 import post2 from "../../../Assets/case-study/gt-holidays/instagram02.webp";
 import post3 from "../../../Assets/case-study/gt-holidays/instagram03.webp";
-import hnbanner from '../../../Assets/harris2.png'
+import hnbanner from "../../../Assets/harris2.png";
 const Gt = () => {
   return (
     <div className="gt">
@@ -19,8 +19,7 @@ const Gt = () => {
           <div className="gt-video">
             <div className="video-div">
               <iframe
-                width="370"
-                height="300"
+                className="videos"
                 src="https://www.youtube.com/embed/EJPlq41Yfck?si=k0Z_EAHzJRSFRSjO&controls=0"
                 title="YouTube video player"
                 frameborder="0"
@@ -31,8 +30,7 @@ const Gt = () => {
             </div>
             <div className="video-div">
               <iframe
-                width="370"
-                height="300"
+                className="videos"
                 src="https://www.youtube.com/embed/Orh3rWsLZF4?si=A1-FkT3g7_6Ou2dJ&controls=0"
                 title="YouTube video player"
                 frameBorder="0"
@@ -43,8 +41,7 @@ const Gt = () => {
             </div>
             <div className="video-div">
               <iframe
-                width="370"
-                height="300"
+                className="videos"
                 src="https://www.youtube.com/embed/LxVT5G5NZN0?si=ey2FwCFkBIxmEfOw&controls=0"
                 title="YouTube video player"
                 frameBorder="0"

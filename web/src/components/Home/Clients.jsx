@@ -35,11 +35,11 @@ import TitanEyePlus from "../../Assets/clients-logo/titaneyeplus.jpg";
 import Votto from "../../Assets/clients-logo/votto.jpg";
 import YMCA from "../../Assets/clients-logo/ymca.jpg";
 import BNi from "../../Assets/clients-logo/Bni.png";
-// import Varam from '../../Assets/clients-logo/Varam.png'
-import Vpr from '../../Assets/clients-logo/vpr-logo.png'
-// import Gb from '../../Assets/clients-logo/GB.png'
-// import Fuji from '../../Assets/clients-logo/Fuji.png'
-import Jd from '../../Assets/clients-logo/JD Wood.png'
+import Varam from "../../Assets/clients-logo/Varam.png";
+import Vpr from "../../Assets/clients-logo/vpr-logo.png";
+import Gb from "../../Assets/clients-logo/GB.png";
+import Fuji from "../../Assets/clients-logo/Fuji.png";
+import Jd from "../../Assets/clients-logo/JD Wood.png";
 
 import { Link } from "react-router-dom";
 import { RiArrowRightLine } from "react-icons/ri";
@@ -56,6 +56,8 @@ const clients = [
   { src: ColdAir, alt: "Cold Air" },
   { src: Delano, alt: "Delano" },
   { src: DigiMart, alt: "Digi Mart" },
+  { src: BNi, alt: "BNI Kanya" },
+  { src: Varam, alt: "Varam Hospital" },
   { src: Ayutha, alt: "Ayutha" },
   { src: Hairways, alt: "Hairways" },
   { src: BrandPartners, alt: "Brand Partners" },
@@ -75,12 +77,11 @@ const clients = [
   { src: Votto, alt: "Votto" },
   { src: Spring, alt: "Spring" },
   { src: FirstLoan, alt: "First Loan" },
-  { src: BNi, alt: "BNI Kanya" },
-  // { src: Varam, alt: "Varam Hospital" },
+
   { src: Vpr, alt: "VPR Construction" },
-  // { src: Gb, alt: "Greatest Bakery" },
+  { src: Gb, alt: "Greatest Bakery" },
   { src: Jd, alt: "JD Wood " },
-  // { src: Fuji, alt: "Fuji" },
+  { src: Fuji, alt: "Fuji" },
 ];
 
 const App = () => {
@@ -117,7 +118,6 @@ const App = () => {
     <div className="mainContainer">
       <h3 className="client-head">Our Trusted Partners</h3>
       <div className="sliders">
-
         <Slider {...setting1}>
           {clients.map((client, index) => (
             <div key={index} className="client-slider">
@@ -149,7 +149,6 @@ const App = () => {
             </div>
           ))}
         </Slider>
-        
       </div>
 
       <div className="ourclients">

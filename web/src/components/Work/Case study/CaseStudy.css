@@ -19,6 +19,8 @@
 .gt-banner {
   width: 98%;
   margin-bottom: 100px;
+  /* border: 1px solid; */
+  padding-bottom: 50px;
 }
 .gt-banner img {
   height: 100%;
@@ -28,14 +30,31 @@
 }
 
 .gt-video {
-  height: 200px;
   width: 100%;
-  margin-top: -50px;
-  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 50px;
+  background: linear-gradient(
+    to right,
+    #ffc700,
+    #ffce03,
+    #ffc700,
+    #ffc300,
+    #ffba00,
+    #fdb700
+  );
+  padding-bottom: 50px;
+}
+.video-div {
+  height: 300px;
+  width: 25%;
+  padding: 10px;
+}
+.videos {
+  height: 100%;
+  width: 100%;
 }
 .gt-abt {
   width: 95%;
@@ -87,6 +106,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  border: 1px solid;
 }
 .gt-section {
   background-image: url(../../../Assets/24427649_re_406.jpg);
@@ -103,6 +123,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  border: 1px solid;
 }
 .gt-sec-cnt h2 {
   width: 100%;
@@ -121,6 +142,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  border: 1px solid;
 }
 .gt-img {
   width: 49%;
@@ -152,6 +174,37 @@
 .gt-img:hover img,
 .post-img:hover img {
   transform: scale(1.05);
+}
+
+/* Responsive */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .gt-banner {
+    width: 100%;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .gt {
+    width: 100vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    width: 100%;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+}
+@media (min-width: 426px) and (max-width: 768px) {
+}
+@media (max-width: 426px) {
 }
 
 /* ----------------------------------------------Harris-Nadar----------------------------------------------------------- */
@@ -526,7 +579,7 @@
 
 .next-page-cnt p {
   margin-bottom: 0;
-  display: inline-block; 
+  display: inline-block;
   position: relative;
 }
 
@@ -569,5 +622,5 @@
 }
 
 .next-page-container:hover .next-page-cnt p::after {
-  width: 100%; 
+  width: 100%;
 }

@@ -1,9 +1,9 @@
 .navbar {
   height: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
-  background-color: transparent;
+  background-color: transparent !important;
   width: 100%;
   position: fixed;
   z-index: 1000;
@@ -12,75 +12,64 @@
 
 .navbar.scrolled,
 .navbar.other-page {
-  background: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.11) !important;
+  backdrop-filter: blur(5px);
 }
 
-.navbar .logo {
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: fit-content;
+.navbar-brand img {
+  transition: filter 0.3s ease !important;
 }
 
-.logo img {
-  margin-top: 45px;
-}
-
-.navcontainer {
+.container-fluid {
   width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 70px;
+  display: flex !important;
+  justify-content: space-between !important; 
+  align-items: center !important;
 }
 
-.navbar .nav-links {
-  list-style-type: none;
+.navbar .navbar-nav,
+.collapse {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
   margin: 0;
+  padding: 0; 
 }
 
-.navbar .nav-links li {
+.navbar .navbar-nav li {
   margin: 0 15px;
 }
 
-.navbar .nav-links li a {
-  color: rgb(0, 0, 0);
+.navbar .navbar-nav li a,.collapse a {
+  color: rgb(0, 0, 0) !important;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 18px !important;
+  transition: color 0.3s ease;
 }
 
-.navbar .nav-links li a:hover {
-  color: #ffca00;
+.navbar .navbar-nav li a:hover,
+.navbar .navbar-nav li a.active,
+.collapse a:hover,
+.collapse a.active  {
+  color: #ffca00 !important;
 }
 
-.navbar.about-page .nav-links li a {
-  color: white !important;
-}
 
-.navbar.about-page .nav-links li a:hover {
-  color: #ffca00;
+
+.navbar.about-page .navbar-nav li a:hover {
+  color: #ffca00 !important;
 }
 
 .navbar.about-page .logo img {
   filter: brightness(0) invert(1);
 }
 
-.notification {
-  padding: 10px;
-  margin-top: 15px;
-  border-radius: 5px;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  }
-
-.success {
-  background-color: #28a745; /* Green for success */
+.navbar-toggler {
+  border: none;
 }
 
-.error {
-  background-color: #dc3545; /* Red for error */
+.navbar-collapse {
+  background-color: transparent !important;
 }
