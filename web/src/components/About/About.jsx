@@ -16,7 +16,7 @@ const About = () => {
       duration: 500,
       easing: "ease-out",
       once: false,
-      offset:100,
+      offset: 100,
     });
 
     AOS.refresh();

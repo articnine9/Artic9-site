@@ -19,9 +19,8 @@
 .gt-banner {
   width: 98%;
   margin-bottom: 100px;
-  /* border: 1px solid; */
-  padding-bottom: 50px;
 }
+
 .gt-banner img {
   height: 100%;
   width: 100%;
@@ -61,6 +60,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -106,7 +106,6 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  border: 1px solid;
 }
 .gt-section {
   background-image: url(../../../Assets/24427649_re_406.jpg);
@@ -123,7 +122,6 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  border: 1px solid;
 }
 .gt-sec-cnt h2 {
   width: 100%;
@@ -142,7 +140,6 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  border: 1px solid;
 }
 .gt-img {
   width: 49%;
@@ -177,34 +174,56 @@
 }
 
 /* Responsive */
-
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .gt-banner {
-    width: 100%;
-  }
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  .gt {
-    width: 100vh;
+@media (min-width: 100px) {
+  .hn-main {
+    width: 100vw;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  body {
+@media (max-width: 479px) {
+  .gt-video {
+    gap: 0px;
+    padding-top: 20px;
+  }
+
+  .video-div {
+    height: auto;
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  .gt-abt-section {
+    background-size: cover;
+  }
+  .gt-abt-img img {
+    height: 200px;
+  }
+  .gt-abt-cnt {
     width: 100%;
   }
-  * {
-    margin: 0;
-    padding: 0;
+  .gt-cnt {
+    width: 100%;
+    margin: auto;
   }
-}
-@media (min-width: 480px) and (max-width: 767px) {
-}
-@media (min-width: 426px) and (max-width: 768px) {
-}
-@media (max-width: 426px) {
+  .gt-abt-cnt h2 {
+    text-align: center;
+  }
+  .gt-abt-cnt p {
+    text-align: justify;
+  }
+
+  .gt-sec-cnt {
+    width: 95%;
+  }
+  .gt-sec-image {
+    flex-wrap: nowrap;
+  }
+  .gt-img {
+    width: 49%;
+  }
+  .gt-sec-image img {
+    border-radius: 15px;
+  }
 }
 
 /* ----------------------------------------------Harris-Nadar----------------------------------------------------------- */
@@ -368,6 +387,54 @@
   width: 49.1%;
 }
 
+@media (min-width: 100px) {
+  .hn-main {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 479px) {
+  .hn-cnt {
+    width: 95%;
+  }
+  .hn-cnt-img {
+    width: 100%;
+  }
+  .hn-cntnts {
+    width: 100%;
+  }
+  .hn-cntnt span {
+    text-align: justify;
+  }
+  .hn-gallery {
+    width: 100%;
+    align-items: center;
+  }
+  .hn-case {
+    width: 45%;
+  }
+  .hn-faq-img {
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .gp {
+    display: none;
+  }
+  .faq-img {
+    width: 100%;
+    height: 49%;
+  }
+  .faq-img1 {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .hn-video-main {
+    width: 90%;
+  }
+  .hn-video-min {
+    width: 100%;
+  }
+}
 /* ----------------------------------------------Tino-Engineering----------------------------------------------------------- */
 
 .te {
@@ -378,7 +445,7 @@
   flex-wrap: wrap;
 }
 .te-main {
-  width: 100%;
+  width: 100vw;
   margin-top: 100px;
   display: flex;
   align-items: center;
@@ -470,7 +537,6 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 30px;
   transition: transform 0.3s ease;
 }
 
@@ -491,17 +557,44 @@
 .te-post-img:hover img {
   transform: scale(1.05);
 }
+
+@media (min-width: 100px) {
+  .te-main {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 479px) {
+  .te-cnt {
+    width: 100%;
+  }
+  .te-cnt-img {
+    width: 100%;
+  }
+  .te-cntnts {
+    width: 95%;
+  }
+  .te-sec-cnt {
+    width: 95%;
+  }
+  .te-post-img {
+    width: 45%;
+  }
+}
+
 /* ----------------------------------------------Counter-section----------------------------------------------------------- */
 
 .cont {
   text-align: center;
   margin: 120px 0px;
+
 }
 .cont h3 {
   margin-bottom: 100px;
   font-weight: 600;
   font-family: "poppins", sans-serif;
   font-size: 40px;
+
 }
 .counter-row {
   display: flex;
@@ -509,6 +602,7 @@
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 20px;
+
 }
 
 .counter-box {
@@ -538,10 +632,6 @@
   color: #555;
 }
 
-.counter-box.colored {
-  color: #007bff;
-  border-color: #007bff;
-}
 
 /* ----------------------------------------------Next-Page----------------------------------------------------------- */
 
@@ -623,4 +713,13 @@
 
 .next-page-container:hover .next-page-cnt p::after {
   width: 100%;
+}
+
+@media (max-width: 479px) {
+  .next-page-sec {
+    width: 100%;
+  }
+  .next-page-sec img {
+    width: 90%;
+  }
 }

@@ -56,7 +56,7 @@ const Home = () => {
   // const imagesGrid5 = [grid4, grid5, grid1, grid2];
 
   return (
-    <>
+    <div className="home-main">
       <Carousal />
 
       {/* ----------------------------------------------------Who-are-we------------------------------------------------- */}
@@ -227,7 +227,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

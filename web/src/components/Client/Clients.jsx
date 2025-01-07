@@ -38,12 +38,42 @@ import Vpr from "../../Assets/clients-logo/vpr-logo.png";
 import Gb from "../../Assets/clients-logo/GB.png";
 import Fuji from "../../Assets/clients-logo/Fuji.png";
 import Jd from "../../Assets/clients-logo/JD Wood.png";
-import { Link } from "react-router-dom";
+import Bharathi from "../../Assets/clients-logo/Bharathidental.png";
+import Cheese from "../../Assets/clients-logo/Cheesenfries.png";
+import Cool from "../../Assets/clients-logo/Cool.png";
+import Coral from "../../Assets/clients-logo/Coral.png";
+import Dawat from "../../Assets/clients-logo/Daawat.png";
+import Fusion from "../../Assets/clients-logo/FusionGaming.png";
+import Gj from "../../Assets/clients-logo/GJ.png";
+import Gnadeep from "../../Assets/clients-logo/Gnadeepam.png";
+import Gr from "../../Assets/clients-logo/GR.png";
+import Gts from "../../Assets/clients-logo/Gts.png";
+import Ifc from "../../Assets/clients-logo/Ifc.png";
+import Kings from "../../Assets/clients-logo/Kings.png";
+import Kings2 from "../../Assets/clients-logo/kings2.png";
+import Knj from "../../Assets/clients-logo/Knj.png";
+import Kumari from "../../Assets/clients-logo/kumari.png";
+import Lfc from "../../Assets/clients-logo/Liyaquat.png";
+import Eativo from "../../Assets/clients-logo/Eativo.png";
+import Naples from "../../Assets/clients-logo/Naples.png";
+import Pikbig from "../../Assets/clients-logo/pikbig.png";
+import Sharon from "../../Assets/clients-logo/Sharon.png";
+import Sheffield from "../../Assets/clients-logo/Sheffild.png";
+import Swiss from "../../Assets/clients-logo/Swiss.png";
+import Tiny from "../../Assets/clients-logo/tiny.png";
 
+import { Link } from "react-router-dom";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 const clients = [
   {
+    src: GT,
+    alt: "GT Holidyas",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+    link: "/gtholidays",
+  },
+  {
     src: HarrisNadar,
-    alt: "Harris Nadar",
+    alt: "Harris Nadar Jewellery",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
     link: "/harrisnadar",
   },
@@ -53,12 +83,7 @@ const clients = [
     link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
-  {
-    src: GT,
-    alt: "GT Holidyas",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
-    link: "/gtholidays",
-  },
+
   {
     src: Titan,
     alt: "Titan World",
@@ -72,11 +97,12 @@ const clients = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
-    src: Snowch,
-    alt: "Snowch",
+    src: Sheffield,
+    alt: "Sheffield Suits and Blazzers",
     link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
+
   {
     src: Arunachala,
     alt: "Arunachala College",
@@ -150,14 +176,27 @@ const clients = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
-    src: Varam,
-    alt: "Varam Hospital",
+    src: Sharon,
+    alt: "Sharon Luxury Cars",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+
+  {
+    src: Akshaya,
+    alt: "Akshaya Catering ",
     link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
   {
     src: Gb,
     alt: "Greatest Bakery",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Snowch,
+    alt: "Snowch",
     link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
@@ -173,12 +212,14 @@ const clients = [
     link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
+
   {
-    src: Vpr,
-    alt: "VPR construction",
+    src: Varam,
+    alt: "Varam Hospital",
     link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
+
   {
     src: Thasor,
     alt: "Thasor Musicals",
@@ -203,12 +244,7 @@ const clients = [
     link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
-  {
-    src: Akshaya,
-    alt: "Akshaya Catering ",
-    link: "/harrisnadar",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
-  },
+
   {
     src: Karpagam,
     alt: "Karpagam Jwellers",
@@ -263,9 +299,147 @@ const clients = [
     link: "/harrisnadar",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
   },
+
+  {
+    src: Bharathi,
+    alt: "Bharathi Dental",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Cheese,
+    alt: "Cheese N' Fries",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Cool,
+    alt: "Cool Events",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+
+  {
+    src: Kings2,
+    alt: "King's Chic Signature",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Coral,
+    alt: "Coral Holidays",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Dawat,
+    alt: "Hotel Daawat",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Vpr,
+    alt: "VPR construction",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Fusion,
+    alt: "Fusion Gaming",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Gj,
+    alt: "GJ Home Innovation",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Gnadeep,
+    alt: "Gnanadeepam",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Gts,
+    alt: "Global Technical Solution",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Ifc,
+    alt: "Indian Forward Company",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Gr,
+    alt: "GR Garments",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+
+  {
+    src: Knj,
+    alt: "Kasi Nadar Jewellery",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Kumari,
+    alt: "Kumari Fitness centre",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Lfc,
+    alt: "Liyaqat Fried Chicken",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Kings,
+    alt: "King's Chic",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+
+  {
+    src: Eativo,
+    alt: "Eativo",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+
+  {
+    src: Naples,
+    alt: "Naples Pizza City",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Pikbig,
+    alt: "Pikbig",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Swiss,
+    alt: "Swiss Bakers",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
+  {
+    src: Tiny,
+    alt: "Tiny Handz Play School",
+    link: "/harrisnadar",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut doloribus maiores odio inventore est adipisci, provident quidem quam fugiat ipsam, delectus explicabo quisquam nesciunt repudiandae nobis excepturi ratione pariatur consequatur dolor! ",
+  },
 ];
 
 const Clients = () => {
+  const [showMore, setShowMore] = useState(false);
   const [tooltip, setTooltip] = useState(null);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
@@ -280,14 +454,19 @@ const Clients = () => {
   const handleMouseMove = (event) => {
     setTooltipPosition({
       x: event.clientX + window.scrollX + 20,
-      y: event.clientY + window.scrollY - -20,
+      y: event.clientY + window.scrollY - 20,
     });
   };
+
+  const handleViewMoreClick = () => {
+    setShowMore(!showMore);
+  };
+
   return (
     <div className="clients-main">
       <h3 className="clients-head">Our Trusted Partners</h3>
       <div className="client-sec">
-        {clients.map((client, index) => (
+        {clients.slice(0, 20).map((client, index) => (
           <Link
             to={client.link}
             key={index}
@@ -299,19 +478,51 @@ const Clients = () => {
             <img src={client.src} alt={client.alt} />
           </Link>
         ))}
-        {tooltip && (
-          <div
-            className="tooltip"
-            style={{
-              left: `${tooltipPosition.x}px`,
-              top: `${tooltipPosition.y}px`,
-            }}
-          >
-            <p className="tltip-head">{tooltip.alt}</p>
-            <p>{tooltip.desc}</p>
-          </div>
-        )}
       </div>
+
+      {showMore && (
+        <div className="client-sec">
+          {clients.slice(20).map((client, index) => (
+            <Link
+              to={client.link}
+              key={index + 20}
+              className="client-logo"
+              onMouseEnter={() => handleMouseEnter(client)}
+              onMouseLeave={handleMouseLeave}
+              onMouseMove={handleMouseMove}
+            >
+              <img src={client.src} alt={client.alt} />
+            </Link>
+          ))}
+        </div>
+      )}
+
+      <button onClick={handleViewMoreClick}>
+        <span className="box">
+          {showMore ? (
+            <>
+              Close <IoIosArrowUp />
+            </>
+          ) : (
+            <>
+              View More <IoIosArrowDown />
+            </>
+          )}
+        </span>
+      </button>
+
+      {tooltip && (
+        <div
+          className="tooltip"
+          style={{
+            left: `${tooltipPosition.x}px`,
+            top: `${tooltipPosition.y}px`,
+          }}
+        >
+          <p className="tltip-head">{tooltip.alt}</p>
+          <p>{tooltip.desc}</p>
+        </div>
+      )}
     </div>
   );
 };

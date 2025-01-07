@@ -8,7 +8,6 @@ import pic2 from "../../Assets/lio.jpg";
 import pic3 from "../../Assets/fox.jpg";
 import pic4 from "../../Assets/panda.jpg";
 import pic5 from "../../Assets/eagle.jpg";
-// import logo from "../../Assets/Grey Artic logo.png";
 import video from "../../Assets/Artic 9 logo.mp4";
 import "./Service.css";
 
@@ -88,7 +87,7 @@ const Service = () => {
   const videoRef = useRef(null);
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.muted = false; // Unmute the video after the page has loaded
+      videoRef.current.muted = false; 
     }
   }, []);
 
@@ -97,7 +96,7 @@ const Service = () => {
       duration: 250,
       easing: "ease-out",
       once: false,
-      offset: 100, // Trigger animation when element is 100px from the viewport
+      offset: 100, 
     });
   }, []);
 

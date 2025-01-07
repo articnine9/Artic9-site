@@ -65,19 +65,20 @@ const Work = () => {
       category: "SEO",
     },
     {
-      imgSrc: model1,
-      heading: "Akshaya",
-      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
-      link: "/gtholidays",
-      category: "SEO",
-    },
-    {
       imgSrc: model9,
       heading: "Karpagam",
       description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/gtholidays",
       category: "Branding",
     },
+    {
+      imgSrc: model1,
+      heading: "Akshaya",
+      description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
+      link: "/gtholidays",
+      category: "SEO",
+    },
+
     {
       imgSrc: model7,
       heading: "DCS Technology",
@@ -94,7 +95,7 @@ const Work = () => {
     },
 
     {
-      imgSrc: model20 ,
+      imgSrc: model20,
       heading: "Cascade Park Stone Flow",
       description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. ",
       link: "/cascadepark",

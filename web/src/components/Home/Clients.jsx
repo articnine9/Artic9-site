@@ -134,7 +134,7 @@ const App = () => {
           ))}
         </Slider>
 
-        <Slider {...setting1}>
+        {/* <Slider {...setting1}>
           {clients.map((client, index) => (
             <div key={index} className="client-slider">
               <img src={client.src} width={200} alt={client.alt} />
@@ -148,7 +148,7 @@ const App = () => {
               <img src={client.src} width={200} alt={client.alt} />
             </div>
           ))}
-        </Slider>
+        </Slider> */}
       </div>
 
       <div className="ourclients">
