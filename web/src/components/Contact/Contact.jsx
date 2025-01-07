@@ -8,6 +8,7 @@ import { FaArrowDown } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
 
 import contact from "../../Assets/contact-img.png";
+import axios from "axios";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -97,18 +98,22 @@ const Contact = () => {
     }
 
     try {
-      const response = await fetch("https://artic-site-backend/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await axios.post(
+        "http://articbackend.artic9.com/email.php",
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-      if (response.ok) {
+      const result = response.data;
+
+      if (result.status === "success") {
         setNotification({
           type: "success",
-          message: "Form submitted successfully!",
+          message: result.message,
         });
         setFormData({
           name: "",
@@ -120,9 +125,10 @@ const Contact = () => {
       } else {
         setNotification({
           type: "error",
-          message: "Error submitting form.",
+          message: result.message,
         });
       }
+
       if (timeoutId) clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         setNotification(null);
@@ -133,6 +139,7 @@ const Contact = () => {
         type: "error",
         message: "An error occurred. Please try again.",
       });
+
       if (timeoutId) clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         setNotification(null);
