@@ -1,0 +1,125 @@
+.seo-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.seo {
+  width: 80%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+  margin-top: 200px;
+}
+.seo-content1 {
+  width: 100%;
+}
+.seo-cnt {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 35px 0px;
+}
+.seo-smry {
+  width: 70%;
+  height: 100%;
+}
+.seo-smry-head h2 {
+  font-size: 2.5rem;
+}
+.seo-smry-cnt p {
+  font-size: 1.2rem;
+  color: #696767;
+}
+.seo-smry-img {
+  width: 22%;
+  height: 350px;
+  border-radius: 20px;
+}
+.seo-smry-img img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+.seo-smry-cnt ul {
+  list-style-type: none;
+  padding: 0%;
+}
+.seo-smry-cnt ul li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.icn {
+  color: #ffca00;
+  font-size: larger;
+}
+
+.seo-know {
+  height: 500px;
+  width: 100%;
+  background: url(../../../Assets/12220552_4935872.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px;
+}
+.seo-know-img {
+  width: 30%;
+  height: 100%;
+  background: url(../../../Assets/seo-cloud.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seo-know-img b {
+  width: 35%;
+  font-size: 2.8rem;
+  text-align: center;
+  color: white;
+}
+.seo-know-cnts {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 48px 0px;
+}
+.seo-know-cnt {
+  width: 48%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.seo-know-percent {
+  border-radius: 30px 0px;
+  border: 2px solid transparent;
+  width: 130px;
+  height: 90px;
+  background: #d25f00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  max-width: 100px;
+}
+
+.seo-know-desc {
+  width: 70%;
+  font-size: 15px;
+  color: #181155;
+}

@@ -15,6 +15,7 @@ import Navbar from "../Header/Navbar";
 import Footer from "../Footer/Footer.jsx";
 import PreloaderWrapper from "../Preloader/PreloaderWrapper.jsx";
 import ScrollupWrapper from "../Preloader/ScrollupWrapper.jsx";
+import SEO from "../Service/Services/seo.jsx";
 const Approutes = () => {
   return (
     <Router>
@@ -116,6 +117,16 @@ const Approutes = () => {
             <ScrollupWrapper>
               <PreloaderWrapper>
                 <Te />
+              </PreloaderWrapper>
+            </ScrollupWrapper>
+          }
+        />
+        <Route
+          path="/seo"
+          element={
+            <ScrollupWrapper>
+              <PreloaderWrapper>
+                <SEO />
               </PreloaderWrapper>
             </ScrollupWrapper>
           }

@@ -5,8 +5,8 @@
   scrollbar-width: none;
   scroll-behavior: smooth;
 }
-.home-main{
-  width: 100vw
+.home-main {
+  width: 100vw;
 }
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Anton&family=Bebas+Neue&family=Doto:wght@100..900&family=Moirai+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -20,23 +20,15 @@
 .carousel-section1 {
   width: 100%;
 }
-.imgs {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+
 .pstrs {
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: end;
   align-items: center;
-}
-.gap {
-  width: 40%;
 }
 
 .pstrs-cnt {
@@ -45,7 +37,6 @@
 .logo {
   object-fit: contain;
   width: 200px;
-  margin-bottom: 50px;
 }
 .mainline {
   color: rgb(255, 255, 255);
@@ -70,9 +61,9 @@
 .slider-btn {
   margin-bottom: 50px;
   margin-top: -20px;
-  width: 100%;
+  width: 45%;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
 }
 .more-btn {
@@ -87,8 +78,6 @@
   background-color: rgb(0, 0, 0);
   color: #ffb901;
   border-radius: 35px;
-  margin-top: -47px;
-  margin-left: 30px;
   border: none;
 }
 .carousel-section2 {
@@ -166,7 +155,6 @@
   object-fit: contain;
   width: 145px;
 }
-
 
 /* who-are-we */
 
@@ -384,7 +372,7 @@
 .client-slider img {
   height: 70%;
   width: 70%;
-  object-fit: contain; 
+  object-fit: contain;
   /* border: 1px solid; */
 }
 .ourclients {
@@ -464,7 +452,7 @@
 .outerdiv {
   width: 100%;
   min-height: 100vh;
-  background: url(../../Assets/white-bg2.jpg);
+  background: url(../../Assets/bg\ 7.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -790,11 +778,158 @@
   font-family: poppins, sans-serif;
 }
 
+@media (max-width: 479px) {
+  .carousel-container,
+  .carousel-section1,
+  .carousel-section2 {
+    width: 100%;
+  }
+  * {
+    margin: 0%;
+    padding: 0%;
+  }
+  .pstrs {
+    height: 50vh;
+    background-size: 50;
+    background-color: #f5e1a4;
+    justify-content: center;
+    align-items: end;
+  }
+  .pstrs-cnt {
+    width: 90%;
+  }
+  .logo {
+    width: 50px;
+    margin-bottom: 0%;
+  }
+  .mainline {
+    font-size: 1.2rem;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+  .secondline {
+    font-size: 0.9rem;
+    margin-bottom: 0px;
+  }
+  .slider-btn {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    align-items: center;
+  }
+  .more-btn {
+    height: 27px;
+    width: 110px;
+    font-weight: 600;
+    line-height: 0px;
+    padding: 0px;
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
 
-
+  .sml-carousal,
+  .sml-carousal1 {
+    width: 50%;
+  }
+  .sml-img {
+    height: 250px;
+  }
+}
 
 @media (min-width: 100px) {
-  .home-main {
+  .home-main,
+  .carousel-container,
+  .outerdiv {
     width: 100vw;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 479px) {
+  /* Outer div */
+  .outerdiv {
+    padding: 0 10px;
+    display: block;
+    background-size: auto; /* Adjust background size for smaller screens */
+  }
+
+  /* Testimonial container */
+  .testimonial-cnt {
+    margin-top: 30px;
+  }
+
+  .testimonial-head {
+    font-size: 35px;
+    width: 100%; /* Make the heading take full width */
+  }
+
+  /* Inner div grid layout */
+  .innerdiv {
+    transform: scale(1); /* Reset scale for mobile */
+    margin: 0;
+    display: grid;
+    grid-template-rows: repeat(2, 20rem);
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Reduce to 2 columns for smaller screens */
+    grid-gap: 0.5rem;
+  }
+
+  /* Each individual box */
+  .eachdiv {
+    padding: 1rem;
+    box-shadow: none; /* Remove shadows to improve performance on smaller screens */
+  }
+
+  /* Specific div styles */
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5 {
+    background-position-x: initial; /* Reset background position */
+    background-size: cover;
+  }
+
+  /* Adjust user details */
+  .userdetails {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .imgbox {
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .imgbox img {
+    width: 3rem; /* Increase image size slightly for mobile */
+  }
+
+  .detbox {
+    text-align: center;
+  }
+
+  .detbox p {
+    font-size: 0.85rem;
+  }
+
+  .detbox .name {
+    font-size: 1rem;
+  }
+
+  .detbox .designation {
+    font-size: 0.8rem;
+  }
+
+  .review h4 {
+    font-size: 1.2rem; /* Decrease review title font size */
+    margin-bottom: 1rem;
+  }
+
+  .video {
+    margin-top: 20px;
   }
 }

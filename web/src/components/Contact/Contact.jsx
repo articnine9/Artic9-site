@@ -151,7 +151,7 @@ const Contact = () => {
     return () => {
       if (timeoutId) clearTimeout(timeoutId);
     };
-  }, []);
+  }, [timeoutId]);
 
   return (
     <div className="contact">

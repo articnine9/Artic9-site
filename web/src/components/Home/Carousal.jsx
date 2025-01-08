@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
 import GT from "../../Assets/carousal/gt-bg.png";
@@ -7,18 +7,14 @@ import AT from "../../Assets/carousal/at-bg.png";
 import harris from "../../Assets/harris2.png";
 import Tino from "../../Assets/carousal/gt-bg.png";
 import Del from "../../Assets/carousal/gt-bg.png";
-
 import Aksh from "../../Assets/carousal/akshya-bg.png";
-
 import gtlogo from "../../Assets/gt-logo.png";
 import bnilogo from "../../Assets/clients-logo/Bni.png";
 import atlogo from "../../Assets/clients-logo/at.png";
 import harrislogo from "../../Assets/clients-logo/Harris Nadar Logo BlaCK.png";
 import tinologo from "../../Assets/clients-logo/tino-logo-gtm.png";
 import dellogo from "../../Assets/clients-logo/Delano.png";
-
 import akshlogo from "../../Assets/clients-logo/akshaya.jpg";
-
 import "./Home.css";
 
 const CarouselComponent = () => {
@@ -69,6 +65,7 @@ const CarouselComponent = () => {
 
     navigate(routes[index]);
   };
+
   const images1 = [
     Aksh,
     "https://picsum.photos/id/456/1200/400",
@@ -82,60 +79,32 @@ const CarouselComponent = () => {
     "https://picsum.photos/id/123/1200/400",
   ];
 
-  const [activeIndex1, setActiveIndex1] = useState(0);
-  const [activeIndex2, setActiveIndex2] = useState(0);
-  const [activeIndex3, setActiveIndex3] = useState(0);
-
-  useEffect(() => {
-    const interval1 = setInterval(() => {
-      setActiveIndex1((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval1);
-  }, [images.length]);
-
-  useEffect(() => {
-    const interval2 = setInterval(() => {
-      setActiveIndex2((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000);
-    return () => clearInterval(interval2);
-  }, [images.length]);
-
-  useEffect(() => {
-    const interval3 = setInterval(() => {
-      setActiveIndex3((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval3);
-  }, [images.length]);
-
   return (
     <div className="carousel-container">
       <div className="carousel-section1">
         <Carousel pause="false" interval={3000}>
           {images.map((image, index) => (
             <Carousel.Item key={index}>
-              <div className="imgs">
-                <div
-                  className="pstrs"
-                  style={{ backgroundImage: `url(${image})` }}
-                  alt={`slide-${index}`}
-                >
-                  <div className="gap"></div>
-                  <div className="pstrs-cnt">
-                    <h2 className="mainline">
-                      {texts[index][0]} <br />
-                      <span>{texts[index][1]}</span>
-                    </h2>
-                    <span className="secondline">{texts[index][2]}</span>
+              <div
+                className="pstrs"
+                style={{ backgroundImage: `url(${image})` }}
+                alt={`slide-${index}`}
+              >
+                <div className="pstrs-cnt">
+                  <h2 className="mainline">
+                    {texts[index][0]} <br />
+                    <span>{texts[index][1]}</span>
+                  </h2>
+                  <span className="secondline">{texts[index][2]}</span>
 
-                    <div className="slider-btn">
-                      <img src={logos[index]} alt="logo" className="logo" />
-                      <button
-                        className="more-btn"
-                        onClick={() => handleLearnMoreClick(index)}
-                      >
-                        Learn more
-                      </button>
-                    </div>
+                  <div className="slider-btn">
+                    <img src={logos[index]} alt="logo" className="logo" />
+                    <button
+                      className="more-btn"
+                      onClick={() => handleLearnMoreClick(index)}
+                    >
+                      Learn more
+                    </button>
                   </div>
                 </div>
               </div>
@@ -182,7 +151,7 @@ const CarouselComponent = () => {
 
         <div className="sml-carousal1">
           <Carousel pause="false" interval={5000}>
-            {images2.map((src, index) => ( 
+            {images2.map((src, index) => (
               <Carousel.Item key={index}>
                 <div
                   className=" sml-img"

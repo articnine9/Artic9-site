@@ -18,10 +18,9 @@ import grid3 from "../../Assets/b4.png";
 import grid4 from "../../Assets/harris2.png";
 import grid5 from "../../Assets/anantha-bavan.png";
 
-// import ServiceTab from "./ServiceTab";
 import Carousal from "./Carousal";
 import TestimonialSection from "./Testimonial";
-import Clients from './Clients'
+import Clients from "./Clients";
 import "./Home.css";
 
 const Home = () => {
@@ -49,12 +48,8 @@ const Home = () => {
     touchMove: true,
   };
 
-  const imagesGrid1 = [grid1, grid2, grid4, grid5];
-  const imagesGrid2 = [grid2, grid4, grid5, grid1];
-  // const imagesGrid3 = [grid3, grid3, grid3, grid3];
-  // const imagesGrid4 = [grid5, grid1, grid2, grid4];
-  // const imagesGrid5 = [grid4, grid5, grid1, grid2];
-
+  const imagesGrid1 = [grid1, grid5, grid4, grid2];
+  const imagesGrid2 = [grid2, grid4, grid1, grid5];
   return (
     <div className="home-main">
       <Carousal />
@@ -116,9 +111,8 @@ const Home = () => {
       {/* <ServiceTab /> */}
 
       {/* ----------------------------------------------------Clients------------------------------------------------- */}
-      <Clients/>
-      {/* ----------------------------------------------------Why-choose-us------------------------------------------------- */}
-      <TestimonialSection />
+      <Clients />
+
       {/* ----------------------------------------------------Blog------------------------------------------------- */}
       <section className="blog-main">
         <div className="blog-container">
@@ -210,7 +204,8 @@ const Home = () => {
           </h3>
         </div>
       </section>
-
+      {/* ----------------------------------------------------Why-choose-us------------------------------------------------- */}
+      <TestimonialSection />
       {/* ----------------------------------------------------Let's work------------------------------------------------- */}
       <section className="letswork-main">
         <div className="letswork-container">
