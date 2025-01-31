@@ -15,7 +15,7 @@ import Navbar from "../Header/Navbar";
 import Footer from "../Footer/Footer.jsx";
 import PreloaderWrapper from "../Preloader/PreloaderWrapper.jsx";
 import ScrollupWrapper from "../Preloader/ScrollupWrapper.jsx";
-import SEO from "../Service/Services/seo.jsx";
+import Sm from "../Service/Services/Socialmedia.jsx";
 const Approutes = () => {
   return (
     <Router>
@@ -122,11 +122,11 @@ const Approutes = () => {
           }
         />
         <Route
-          path="/seo"
+          path="/socialMedia"
           element={
             <ScrollupWrapper>
               <PreloaderWrapper>
-                <SEO />
+                <Sm />
               </PreloaderWrapper>
             </ScrollupWrapper>
           }

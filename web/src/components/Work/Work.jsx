@@ -26,7 +26,14 @@ import model22 from "../../Assets/modal/dreamy-rainbow-countryside-min.jpg";
 import model23 from "../../Assets/modal/landscape-mountains-min.jpg";
 
 import { Link } from "react-router-dom";
-
+import pic1 from "../../Assets/modal/one.jpg";
+import pic2 from "../../Assets/modal/two.jpg";
+import pic3 from "../../Assets/modal/three.jpg";
+import pic4 from "../../Assets/modal/four.jpg";
+import pic5 from "../../Assets/modal/five.jpg";
+import pic6 from "../../Assets/modal/six.jpg";
+import pic7 from "../../Assets/modal/eight.jpg";
+import pic8 from "../../Assets/modal/seven.png";
 const Work = () => {
   const sections = [
     {
@@ -281,28 +288,6 @@ const Work = () => {
     },
   ];
 
-  // const filteredSections = clickedCategory
-  //   ? sections.filter(
-  //       (section) =>
-  //         section.category.toLowerCase() === clickedCategory.toLowerCase()
-  //     )
-  //   : sections;
-
-  const mergedSections = [...sections, ...sideSections];
-
-  const [clickedCategory, setClickedCategory] = useState(null);
-
-  const handleClick = (category) => {
-    setClickedCategory(category);
-  };
-
-  const filteredMergedSections = clickedCategory
-    ? mergedSections.filter(
-        (section) =>
-          section.category.toLowerCase() === clickedCategory.toLowerCase()
-      )
-    : mergedSections;
-
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -331,35 +316,149 @@ const Work = () => {
           <h2>
             Transforming your vision <br /> into action.
           </h2>
-          <div className="category">
-            <ul>
-              {[
-                "All Works",
-                "SEO",
-                "Branding",
-                "Website",
-                "Video Production",
-                "Marketing & Social",
-              ].map((category, index) => (
-                <li
-                  key={index}
-                  className={`category-list ${
-                    clickedCategory === category ? "clicked" : ""
-                  }`}
-                  onClick={() =>
-                    handleClick(category === "All Works" ? null : category)
-                  }
-                >
-                  {category}
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         <div className="work-area">
-          <div className="work-section">
-            {filteredMergedSections.map((section, index) => (
+          <div class="listboard">
+            <Link to="/gtholidays" class="card" data-grid-index="1">
+              <div class="card-video-inner">
+                <img
+                  src={pic1}
+                  alt="GT Holidays cover"
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                />
+              </div>
+              <span class="card-link">GT Holidays</span>
+              <p class="card-description">
+                Offers customized travel packages and tours for unique vacation
+                experiences
+              </p>
+            </Link>
+
+            <Link to="/harrisnadar" class="card" data-grid-index="2">
+              <div class="card-video-inner">
+                <img
+                  src={pic2}
+                  alt="Harris Nadar Jewellery cover"
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                />
+              </div>
+              <span class="card-link">Harris Nadar Jewellery</span>
+              <p class="card-description">
+                Crafting fine, high-quality jewelry that blends tradition with
+                modern design
+              </p>
+            </Link>
+
+            <Link to="/tinoengineering" class="card" data-grid-index="3">
+              <div class="card-video-inner">
+                <img
+                  src={pic3}
+                  alt="Tino Engineering Pvt Ltd cover"
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                />
+              </div>
+              <span class="card-link">Tino Engineering Pvt Ltd</span>
+              <p class="card-description">
+                Provides precision engineering solutions and system integrations
+                for diverse industries
+              </p>
+            </Link>
+
+            <Link to="/gtholidays" class="card" data-grid-index="4">
+              <div class="card-video-inner">
+                <img
+                  src={pic4}
+                  alt="Akshaya Catering cover"
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                />
+              </div>
+              <span class="card-link">Akshaya Catering</span>
+              <p class="card-description">
+                Delivers exceptional catering services with a focus on quality
+                and taste for all events
+              </p>
+            </Link>
+
+            <Link to="/harrisnadar" class="card" data-grid-index="5">
+              <div class="card-video-inner">
+                <img
+                  src={pic5}
+                  alt="Delano Residency cover"
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                />
+              </div>
+              <span class="card-link">Delano Residency</span>
+              <p class="card-description">
+                A premium hospitality brand offering luxurious and comfortable
+                accommodations
+              </p>
+            </Link>
+
+            <Link to="/tinoengineering" class="card" data-grid-index="6">
+              <div class="card-video-inner">
+                <img
+                  src={pic6}
+                  alt="At Broadband cover"
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                />
+              </div>
+              <span class="card-link">AT Broadband</span>
+              <p class="card-description">
+                Offers reliable, high-speed internet and broadband services for
+                homes and businesses
+              </p>
+            </Link>
+
+            <Link to="/gtholidays" class="card" data-grid-index="7">
+              <div class="card-video-inner">
+                <img
+                  src={pic7}
+                  alt="Pragrup architecture cover"
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                />
+              </div>
+              <span class="card-link">Pragrup Architecture</span>
+              <p class="card-description">
+                An architecture firm specializing in innovative and sustainable
+                design solutions
+              </p>
+            </Link>
+
+            <Link to="/harrisnadar" class="card" data-grid-index="8">
+              <div class="card-video-inner">
+                <img
+                  src={pic8}
+                  alt="Fuji Otis Monarch cover"
+                  width="1600"
+                  height="1200"
+                  loading="lazy"
+                />
+              </div>
+              <span class="card-link">Fuji Otis Monarch</span>
+              <p class="card-description">
+                Leading provider of advanced elevator and escalator systems with
+                a focus on safety and performance
+              </p>
+            </Link>
+          </div>
+
+          {/* <div className="work-section">
+            {sections.map((section, index) => (
               <Link
                 to={section.link}
                 key={index}
@@ -397,7 +496,7 @@ const Work = () => {
                 </div>
               </Link>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

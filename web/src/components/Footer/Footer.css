@@ -1,24 +1,28 @@
-.bg-color-dark{
-    background-color: #000;
-
+.bg-color-dark {
+  background-color: #000;
+  padding: 0%;
 }
 
-.cntnt{
-    color: white !important;
+.cntnt {
+  color: white !important;
 }
 
-
-.icns{
-    color: #cacaca;
+.icns {
+  color: #cacaca;
 }
-.footer-link{
-    color: white !important;
-    text-decoration: none !important;
-    font-size: 14px;
+.footer-link {
+  color: white !important;
+  text-decoration: none !important;
+  font-size: 14px;
 }
-.footer-link:hover{
-    color: gold !important;
+.footer-link:hover {
+  color: gold !important;
 }
-/* .footer-body{
-    width: 100vh;
-} */
+.footer-body {
+  width: 100vw;
+  background-color: #000 !important;
+  background: url("../../Assets/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+}

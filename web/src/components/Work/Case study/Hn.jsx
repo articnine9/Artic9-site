@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+
 import Nextpage from "../Case study/Nextpage";
-import tebanner from "../../../Assets/harris2.png";
+import tebanner from "../../../Assets/case-study/tino-engineering/banner001.jpg";
 import "./CaseStudy.css";
 
-import harris from "../../../Assets/case-study/harris_nadar/banner.png";
+import harris from "../../../Assets/case-study/harris_nadar/harris.jpg";
 import abt from "../../../Assets/case-study/harris_nadar/about (3).png";
 import case1 from "../../../Assets/case-study/harris_nadar/case01.webp";
 import case2 from "../../../Assets/case-study/harris_nadar/case02.webp";
@@ -11,26 +12,32 @@ import case3 from "../../../Assets/case-study/harris_nadar/case03.webp";
 import case4 from "../../../Assets/case-study/harris_nadar/case04.webp";
 import case5 from "../../../Assets/case-study/harris_nadar/case05.webp";
 import case6 from "../../../Assets/case-study/harris_nadar/case06.webp";
-import faq1 from "../../../Assets/case-study/harris_nadar/grid-1.png";
-import faq2 from "../../../Assets/case-study/harris_nadar/grid-2.png";
-import faq3 from "../../../Assets/case-study/harris_nadar/grid-4.png";
-
+// import faq1 from "../../../Assets/case-study/harris_nadar/grid-1.png";
+// import faq2 from "../../../Assets/case-study/harris_nadar/grid-2.png";
+// import faq3 from "../../../Assets/case-study/harris_nadar/grid-4.png";
+import video from "../../../Assets/case-study/harris_nadar/video.mov";
 const Hn = () => {
   const cases = [case1, case2, case3, case4, case5, case6];
 
-  const faqImgs = [faq1, faq2, faq3];
+  // const faqImgs = [faq1, faq2, faq3];
 
   const videos = [
     "https://www.youtube.com/embed/OaVf6K1RI3o?si=3dB1pnnKnh31G9fB",
     "https://www.youtube.com/embed/RgHJ4OXey_w?si=hAzcEIHuphTXcA7g",
     "https://www.youtube.com/embed/SgsneAdmjBY?si=prlpEybalQt_wmLm",
   ];
-
+  const videoRef = useRef(null);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+    }
+  }, []);
   return (
     <div className="hn">
       <div className="hn-main">
         <div className="hn-banner">
           <img src={harris} alt="bg-banner" />
+          {/* <div className="image"></div> */}
         </div>
 
         <div className="hn-cnt">
@@ -73,7 +80,7 @@ const Hn = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="hn-faq">
+        {/* <div className="hn-faq">
           <div className="hn-faq-main">
             <div className="hn-faq-head">
               <h2>Frequently Asked Questions</h2>
@@ -120,6 +127,30 @@ const Hn = () => {
               </span>
             </div>
           </div>
+        </div> */}
+         
+        {/* Valentine-sec */}
+        <div className="hn-vale">
+          <div className="hn-vale-main">
+            <div className="hn-vale-sec">
+              <div className="hn-vale-img">
+                <video width={100} ref={videoRef} src={video} autoPlay loop muted>
+                    Your browser does not support the video.
+                  </video>
+              </div>
+            </div>
+            <div className="hn-vale-sec1">
+              <div className="hn-vale-sec1-quote">
+                <h2>
+                  "Jewelry is like the perfect spice – it always complements
+                  what's already there."
+                </h2>
+              </div>
+              <div className="hn-vale-sec1-person">
+                <p>– Diane Von Furstenberg </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Video Section */}
@@ -144,7 +175,7 @@ const Hn = () => {
             ))}
           </div>
         </div>
-
+  
         <Nextpage
           title="Tino Engineering"
           imageUrl={tebanner}

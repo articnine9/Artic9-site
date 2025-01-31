@@ -36,22 +36,22 @@ const Footer = () => {
               </h5>
               <div className="mb-4">
                 <a href="/socialmedia" className="footer-link">
-                &gt;&gt;Social Media Marketing
+                  &gt;&gt;Social Media Marketing
                 </a>
               </div>
               <div className="mb-4">
                 <a href="/websitedev" className="footer-link">
-                &gt;&gt;Web Developing
+                  &gt;&gt;Web Developing
                 </a>
               </div>
               <div className="mb-4">
                 <a href="/videoprod" className="footer-link">
-                &gt;&gt;Video Production
+                  &gt;&gt;Video Production
                 </a>
               </div>
               <div className="mb-4">
                 <a href="/searchengine" className="footer-link">
-                &gt;&gt;SEO
+                  &gt;&gt;SEO
                 </a>
               </div>
             </div>
@@ -65,22 +65,22 @@ const Footer = () => {
               </h5>
               <div className="mb-4">
                 <a href="/socialmedia" className="footer-link">
-                &gt;&gt;Social Media Marketing
+                  &gt;&gt;Social Media Marketing
                 </a>
               </div>
               <div className="mb-4">
                 <a href="/websitedev" className="footer-link">
-                &gt;&gt;Web Developing
+                  &gt;&gt;Web Developing
                 </a>
               </div>
               <div className="mb-4">
                 <a href="/videoprod" className="footer-link">
-                &gt;&gt;Video Production
+                  &gt;&gt;Video Production
                 </a>
               </div>
               <div className="mb-4">
                 <a href="/searchengine" className="footer-link">
-                &gt;&gt;SEO
+                  &gt;&gt;SEO
                 </a>
               </div>
             </div>
@@ -112,7 +112,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="footer-link"
                 >
-                   hi@artic9.com
+                  hi@artic9.com
                 </a>
               </div>
               <div className="mb-4 flex">
@@ -123,7 +123,8 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="footer-link "
                 >
-                  30A, Gnanai St, Nagercoil, Tamil Nadu <p style={{textIndent:"33px"}}>- 629001</p>
+                  30A, Gnanai St, Nagercoil, Tamil Nadu{" "}
+                  <p style={{ textIndent: "33px" }}>- 629001</p>
                 </a>
               </div>
             </div>
@@ -194,9 +195,9 @@ const Footer = () => {
 
       <div
         className="text-center p-4 "
-        style={{ backgroundColor: "rgba(145, 145, 145, 0.16)" }}
+        // style={{ backgroundColor: "rgba(145, 145, 145, 0.16)" }}
       >
-        <span className="footer-link"> © 2024 </span>
+        <span className="footer-link"> © 2025 </span>
         <a
           className="footer-link"
           href="https://artic9.com/"

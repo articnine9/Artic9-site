@@ -16,13 +16,13 @@
 
 .scrollup {
   display: inline-block;
-  background: #ffee00;
+  background: #ffffff;
   color: #000;
   padding: 10px 15px;
   border-radius: 50%;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: background 0.3s ease;
+  /* transition: background 0.3s ease; */
 }
 
 .scrollup:hover {

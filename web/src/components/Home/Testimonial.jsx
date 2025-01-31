@@ -66,13 +66,13 @@ const TestimonialCarousel = () => {
 
   const handleMouseEnter = (index) => {
     if (index === 0 || index === 4) {
-      setPausedIndexes((prev) => [...prev, index]); 
+      setPausedIndexes((prev) => [...prev, index]);
     }
   };
 
   const handleMouseLeave = (index) => {
     if (index === 0 || index === 4) {
-      setPausedIndexes((prev) => prev.filter((i) => i !== index)); 
+      setPausedIndexes((prev) => prev.filter((i) => i !== index));
     }
   };
 
@@ -81,7 +81,8 @@ const TestimonialCarousel = () => {
       <div className="outerdiv">
         <div className="testimonial-cnt">
           <span className="testimonial-head">
-            Hear what <br /><b>our client </b>says
+            Hear what <br />
+            <b>our client </b>says
           </span>
         </div>
         <div className="innerdiv">
@@ -93,7 +94,7 @@ const TestimonialCarousel = () => {
               onMouseLeave={() => handleMouseLeave(index)}
             >
               <Carousel
-                interval={pausedIndexes.includes(index) ? null : 3000} 
+                interval={pausedIndexes.includes(index) ? null : 3000}
                 controls={false}
                 indicators={false}
               >
@@ -118,8 +119,9 @@ const TestimonialCarousel = () => {
                             className="video"
                             width="100%"
                             height="215"
-                            src={`https://www.youtube.com/embed/${videoUrl
-                              .split("/")[3]}`}
+                            src={`https://www.youtube.com/embed/${
+                              videoUrl.split("/")[3]
+                            }`}
                             title={`testimonial-video-${index}`}
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -153,6 +155,7 @@ const TestimonialCarousel = () => {
           ))}
         </div>
       </div>
+      
     </section>
   );
 };

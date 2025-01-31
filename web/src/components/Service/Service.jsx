@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
-import pic5 from "../../Assets/service.png";
+import pic5 from "../../Assets/service.jpg";
 import video from "../../Assets/Artic 9 logo.mp4";
 import "./Service.css";
 import { useNavigate } from "react-router-dom";
@@ -75,7 +75,7 @@ const Service = () => {
       num: "02",
       content:
         "At Artic9, we believe everyone deserves an exceptional user experience, whether using a product at work or in their free time. We create memorable enterprise and consumer products as well as provide comprehensive design systems for effortless product iteration.",
-      route: "/graphic-designing",
+      route: "/socialMedia",
 
     },
     {
