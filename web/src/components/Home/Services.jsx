@@ -144,7 +144,6 @@
 
 // export default Services;
 
-
 import React, { useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -333,7 +332,7 @@ const Services = () => {
                 <i
                   className={`slide_dot slide_dot-${index}`}
                   style={{
-                    backgroundColor: colors[service.colorIndex], 
+                    backgroundColor: colors[service.colorIndex],
                   }}
                 ></i>
                 <span
@@ -345,10 +344,10 @@ const Services = () => {
                     display: index === 0 ? "none" : "block",
                   }}
                 >
-                  {service.label.split(" ")[0]}<br/>
-                  {service.label.split(" ")[1]}<br/>
+                  {service.label.split(" ")[0]}
+                  {service.label.split(" ")[1]}
+                  <br />
                   {service.label.split(" ")[2]}
-
                 </span>
               </a>
             ))}
