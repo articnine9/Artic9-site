@@ -29,6 +29,8 @@ import Clients from "./Clients";
 import Services from "./Services";
 import Gtestimonial from "./Gtestimonial";
 
+import { BsArrowRight } from "react-icons/bs";
+
 import "./Home.css";
 // import CubeAnimation from "./CubeAnimation";
 
@@ -164,6 +166,8 @@ const Home = () => {
                   style={{ backgroundImage: `url(${client.src})` }}
                   alt={client.alt}
                 />
+
+                
               </div>
             ))}
           </Slider>
@@ -306,15 +310,16 @@ const Home = () => {
       {/* ----------------------------------------------------Let's work------------------------------------------------- */}
       <section className="letswork-main">
         <div className="letswork-container">
-          <span>Let's Work Together</span>
+          <span className="lestwork-title">Let's Work Together</span>
           <div className="letswork-link">
             <Link
               className="mail-link"
-              to="mailto:hi@artic9.com"
+              to="/contact"
               target="_blank"
               rel="noreferrer noopener"
             >
-              hi@artic9.com
+              <span className="letswork-mail">hi@artic9.com</span>
+              <BsArrowRight className="svg" />
             </Link>
           </div>
         </div>

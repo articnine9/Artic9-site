@@ -144,6 +144,7 @@
 
 // export default Services;
 
+
 import React, { useState, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -160,6 +161,8 @@ import bg3 from "../../Assets/service/web-design.jpg";
 import bg4 from "../../Assets/service/ecommerce.jpg";
 import bg5 from "../../Assets/service/ui-ux.jpg";
 
+import disk from "../../Assets/service/dial-disk-md.png";
+
 import "./Home.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -167,44 +170,95 @@ gsap.registerPlugin(ScrollTrigger);
 const sections = [
   {
     image: `url(${pic1})`,
-    title: "Branding",
+    title: "Digital Branding",
     content:
-      "Customized, responsive and aesthetically designed websites catapult your brand to new heights among clients. Ability to understand customer requirements precisely will bring in creative and innovative web design when you choose Swaragh.",
+      "Customized, responsive and aesthetically designed websites catapult your brand to new heights among clients.",
     bgImage: `url(${bg1})`,
-    color: "#ffca00",
+    color: "#45bfff",
   },
   {
     image: `url(${pic2})`,
     title: "Social Media Marketing",
     content:
-      "Our content writers, digital marketers, and SEO experts build a strong digital presence for our customers which enables return on investment(ROI). We are rewarded for the practical solutions and digital marketing services we offer.",
+      "Our content writers, digital marketers, and SEO experts build a strong digital presence for our customers.",
     bgImage: `url(${bg2})`,
-    color: "#4CAF50",
+    color: "#ffc41e",
   },
   {
     image: `url(${pic3})`,
     title: "Website Development",
     content:
-      "A visually impressive User Interface & User Experience (UI/UX) and all its connected powerful tools are essential to enhance the virtual presence for any business and help generate more leads and improve conversion rates.",
+      "A visually impressive User Interface & User Experience (UI/UX) and all its connected powerful tools.",
     bgImage: `url(${bg3})`,
-    color: "#2196F3",
+    color: "#f16ca8",
   },
   {
     image: `url(${pic4})`,
     title: "Pay Per Click",
     content:
-      "Digital Branding is the creative, strategic process of telling our potential customers what our brand does. We can assist you in developing logos, brand envisioning, brand representation, and so on.",
+      "Digital Branding is the creative, strategic process of telling our potential customers what our brand does.",
     bgImage: `url(${bg4})`,
-    color: "#FF9800",
+    color: "#23ee68",
   },
   {
     image: `url(${pic5})`,
     title: "SEO",
     content:
-      "Having an e-commerce alternative available to sell your services and products for your brand worldwide at all times is a wise decision. Come design and develop an e-commerce website with the best ecommerce web design company in Bangalore.",
+      "Having an e-commerce alternative available to sell your services and products for your brand worldwide.",
     bgImage: `url(${bg5})`,
-    color: "#9C27B0",
+    color: "#14cadc",
   },
+];
+
+const services = [
+  {
+    href: "#slide_01",
+    title: "Digital Branding Services",
+    label: "Digital Branding",
+    colorIndex: 0,
+  },
+  {
+    href: "#slide_02",
+    title: "Social Media Marketing",
+    label: "Social Media Marketing",
+    colorIndex: 1,
+  },
+  {
+    href: "#slide_03",
+    title: "Website Development Services",
+    label: "Website Design/ Development",
+    colorIndex: 2,
+  },
+  {
+    href: "#slide_04",
+    title: "Pay Per Click",
+    label: "Pay Per Click",
+    colorIndex: 3,
+  },
+  {
+    href: "#slide_05",
+    title: "SEO Services",
+    label: "Search Engine Optimization",
+    colorIndex: 4,
+  },
+];
+
+const colors = ["#45bfff", "#ffc41e", "#f16ca8", "#23ee68", "#14cadc"];
+
+const positions = [
+  { top: "317px", left: "552px" },
+  { top: "543px", left: "382px" },
+  { top: "448px", left: "114px" },
+  { top: "165px", left: "122px" },
+  { top: "85px", left: "392px" },
+];
+
+const spanPositions = [
+  { top: "-21px", left: "28px" },
+  { top: "9px", left: "21px" },
+  { top: "20px", left: "-184px" },
+  { top: "-53px", left: "-186px" },
+  { top: "-44px", left: "21px" },
 ];
 
 const Services = () => {
@@ -213,16 +267,18 @@ const Services = () => {
   useEffect(() => {
     const scrollTrigger = ScrollTrigger.create({
       trigger: ".service",
-      start: "top ",
-      end: "+=500%",
+      start: "top top",
+      end: "+=100%",
       pin: true,
-      anticipatePin: 1,
       scrub: true,
-      markers: true,
       onUpdate: ({ progress }) => {
-        const newSection = Math.floor(progress * (sections.length - 1));
+        const newSection = Math.min(
+          Math.floor(progress * (sections.length - 1)),
+          sections.length - 1
+        );
         setCurrentSection(newSection);
       },
+      markers: true,
     });
 
     return () => {
@@ -230,21 +286,81 @@ const Services = () => {
     };
   }, []);
 
+  useEffect(() => {
+    services.forEach((service, index) => {
+      const dot = document.querySelector(`.slide_dot-${index}`);
+      const colorCycleDuration = 0.1;
+
+      if (dot) {
+        gsap.to(dot, {
+          backgroundColor:
+            colors[(currentSection + service.colorIndex) % colors.length],
+          duration: colorCycleDuration,
+        });
+      }
+    });
+  }, [currentSection]);
+
   return (
     <div
       className="service"
       style={{
         backgroundImage: sections[currentSection].bgImage,
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+        backgroundPosition: "50% 0%",
+        height: "100vh",
       }}
     >
       <div className="service-main">
         <div className="service-box">
+          <div className="slide_dial">
+            <img src={disk} alt="slider wheel" loading="lazy" />
+          </div>
+          <div className="slide_dots_wheel">
+            {services.map((service, index) => (
+              <a
+                key={index}
+                href={service.href}
+                title={service.title}
+                className="slider-link"
+                style={{
+                  position: "absolute",
+                  top: positions[index].top,
+                  left: positions[index].left,
+                }}
+              >
+                <i
+                  className={`slide_dot slide_dot-${index}`}
+                  style={{
+                    backgroundColor: colors[service.colorIndex], 
+                  }}
+                ></i>
+                <span
+                  className="slider-name"
+                  style={{
+                    position: "absolute",
+                    top: spanPositions[index].top,
+                    left: spanPositions[index].left,
+                    display: index === 0 ? "none" : "block",
+                  }}
+                >
+                  {service.label.split(" ")[0]}<br/>
+                  {service.label.split(" ")[1]}<br/>
+                  {service.label.split(" ")[2]}
+
+                </span>
+              </a>
+            ))}
+          </div>
           <div
             className="service-img-box"
-            style={{ backgroundImage: sections[currentSection].image }}
+            style={{
+              backgroundImage: sections[currentSection].image,
+            }}
           ></div>
         </div>
-        <div className="service-box">
+        <div className="service-box1">
           <div className="service-box-cnts">
             <h2 style={{ color: sections[currentSection].color }}>
               {sections[currentSection].title}
