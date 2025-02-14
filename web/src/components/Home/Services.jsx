@@ -201,7 +201,7 @@ const sections = [
   },
   {
     image: `url(${pic5})`,
-    title: "SEO",
+    title: "Search Engine Optimization",
     content:
       "Having an e-commerce alternative available to sell your services and products for your brand worldwide.",
     bgImage: `url(${bg5})`,
@@ -230,7 +230,7 @@ const services = [
   },
   {
     href: "#slide_04",
-    title: "Pay Per Click",
+    title: `Pay &nbsp Per Click`,
     label: "Pay Per Click",
     colorIndex: 3,
   },
@@ -253,11 +253,11 @@ const positions = [
 ];
 
 const spanPositions = [
-  { top: "-21px", left: "28px" },
+  { top: "-21px", right: "10px" },
   { top: "9px", left: "21px" },
   { top: "20px", left: "-184px" },
-  { top: "-53px", left: "-186px" },
-  { top: "-44px", left: "21px" },
+  { top: "-63px", left: "-189px" },
+  { top: "-61px", left: "21px" },
 ];
 
 const Services = () => {
@@ -277,7 +277,7 @@ const Services = () => {
         );
         setCurrentSection(newSection);
       },
-      markers: true,
+      markers: false,
     });
 
     return () => {
@@ -285,9 +285,10 @@ const Services = () => {
     };
   }, []);
 
-  useEffect(() => {
+   useEffect(() => {
     services.forEach((service, index) => {
       const dot = document.querySelector(`.slide_dot-${index}`);
+      const sliderName = document.querySelectorAll(".slider-name")[index];
       const colorCycleDuration = 0.1;
 
       if (dot) {
@@ -296,6 +297,27 @@ const Services = () => {
             colors[(currentSection + service.colorIndex) % colors.length],
           duration: colorCycleDuration,
         });
+
+        if (sliderName) {
+          gsap.to(sliderName, {
+            opacity: 0,
+            duration: 0.1,
+            onComplete: () => {
+              sliderName.innerHTML = sections[currentSection].title;
+              gsap.to(sliderName, { opacity: 1, duration: 0.1 });
+            },
+          });
+        }
+      }
+    });
+  }, [currentSection]);
+
+  useEffect(() => {
+    const sliderNames = document.querySelectorAll(".slider-name");
+
+    sliderNames.forEach((sliderName, index) => {
+      if (index === currentSection) {
+        sliderName.innerHTML = sections[currentSection].title;
       }
     });
   }, [currentSection]);
@@ -341,13 +363,11 @@ const Services = () => {
                     position: "absolute",
                     top: spanPositions[index].top,
                     left: spanPositions[index].left,
-                    display: index === 0 ? "none" : "block",
+                    right: spanPositions[index].right,
+                    visibility: index === 0 ? "hidden" : "visible",
                   }}
                 >
-                  {service.label.split(" ")[0]}
-                  {service.label.split(" ")[1]}
-                  <br />
-                  {service.label.split(" ")[2]}
+                  {service[currentSection]}
                 </span>
               </a>
             ))}

@@ -315,7 +315,7 @@ const Home = () => {
             <Link
               className="mail-link"
               to="/contact"
-              target="_blank"
+              // target="_blank"
               rel="noreferrer noopener"
             >
               <span className="letswork-mail">hi@artic9.com</span>

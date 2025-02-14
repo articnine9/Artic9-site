@@ -15,6 +15,9 @@ import harrislogo from "../../Assets/clients-logo/Harris Nadar Logo BlaCK.png";
 import praglogo from "../../Assets/clients-logo/Pragurp.jpg";
 import dellogo from "../../Assets/clients-logo/Delano.png";
 import akshlogo from "../../Assets/clients-logo/akshaya.jpg";
+// import Tino from "../../Assets/carousal/gt-bg.png";
+// import tinologo from "../../Assets/clients-logo/tino-logo-gtm.png";
+
 import "./Home.css";
 
 const CarouselComponent = () => {
@@ -74,8 +77,8 @@ const CarouselComponent = () => {
 
   return (
     <div className="carousel-container">
-      {/* <div className="carousel-section1">
-        <Carousel pause="false" interval={3000}>
+      <div className="carousel-section1">
+        {/* <Carousel pause="false" interval={3000}>
           {images.map((image, index) => (
             <Carousel.Item key={index}>
               <div
@@ -103,8 +106,8 @@ const CarouselComponent = () => {
               </div>
             </Carousel.Item>
           ))}
-        </Carousel>
-      </div> */}
+        </Carousel> */}
+      </div>
 
       <div className="carousel-section2">
         <div className="sml-carousal">

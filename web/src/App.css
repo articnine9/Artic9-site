@@ -7,5 +7,10 @@
 
 body{
   background: linear-gradient(1turn, #fff, #efedf0 60%);
+  scroll-behavior: smooth;
 
+}
+
+html {
+  scroll-behavior: smooth;
 }
