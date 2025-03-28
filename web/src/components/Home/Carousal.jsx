@@ -76,7 +76,7 @@ const CarouselComponent = () => {
   const smllogos1 = [harrislogo, atlogo, praglogo];
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-container"> 
       <div className="carousel-section1">
         {/* <Carousel pause="false" interval={3000}>
           {images.map((image, index) => (
